@@ -91,7 +91,7 @@ header{
     background: var(--dark) ;
     justify-content:center;
     align-items: center;
-    color: var(--primaryD1);
+    color: var(--primary);
 }
 .categories{
     display: flex;
@@ -129,8 +129,20 @@ header{
     margin: 0px;
     color: var(--primaryD1);
     font-size: var(--h2);
+    transition: 0.5s;
 }
+
+.entrega1 a:hover{
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    color: var(--primaryL2);
+    font-size: var(--h2);
+}
+
 .entrega1 hr{
+    border: 1px solid var(--primaryD1);
     margin: 10px 0px;
     width: 100%;
 }
+
