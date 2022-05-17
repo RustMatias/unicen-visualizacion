@@ -85,10 +85,12 @@
 
 body{
     background-image: url(../img/background.png);
-    background-color: var(--primaryL2);
 
 }
+
 header{
+    width: 100vw;
+    position: absolute;
     display: flex;
     height: 56px;
     background: var(--dark) ;
