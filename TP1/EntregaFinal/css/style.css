@@ -25,6 +25,7 @@
     
 
     /* Font Size */
+    --h10: 26px;
     --h1: 36px;
     --h2: 26px;
     --h3: 20px;
@@ -83,7 +84,9 @@
 }
 
 body{
+    background-image: url(../img/background.png);
     background-color: var(--primaryL2);
+
 }
 header{
     display: flex;
@@ -93,6 +96,7 @@ header{
     align-items: center;
     color: var(--primary);
 }
+
 .categories{
     display: flex;
     justify-content: center;
@@ -129,7 +133,7 @@ header{
     margin: 0px;
     color: var(--primaryD1);
     font-size: var(--h2);
-    transition: 0.5s;
+    transition: 0.4s;
 }
 
 .entrega1 a:hover{
@@ -144,5 +148,18 @@ header{
     border: 1px solid var(--primaryD1);
     margin: 10px 0px;
     width: 100%;
+}
+
+footer{
+    position: fixed;
+    padding-top: 16px;
+    letter-spacing: var(--grid1);
+    background-color: var(--dark);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 56px;
+    color: var(--primary);
+    text-align: center;  
 }
 
