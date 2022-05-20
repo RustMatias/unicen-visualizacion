@@ -155,7 +155,7 @@ footer{
     background-color: var(--dark);
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     height: 56px;
     color: var(--primary);
     text-align: center;  
