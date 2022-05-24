@@ -3,6 +3,7 @@
     --primary: #F1AC30;
     --primaryL1: #F4BE5E; 
     --primaryL2: #F7D08A;
+    --primaryL3: #fae0ae;
     --primaryD1: #DF9714;
     --primaryD2: #BD7C07;
     --secondary: #613621;
@@ -20,7 +21,7 @@
     --danger: #B91C1C;
     --agree: #2FE2A2;
     --precaution: #F1F042;
-    --overlay:#18171580;
+    --overlay:#181715b6;
     --overlaygames: #652ba3c4;
     --overlaySecondary: #61362136;
     --overGame: linear-gradient(180deg, rgba(247,208,138,0.1) 36%, rgba(44,38,30,1) 100%);
@@ -80,7 +81,7 @@
 
 html{
     font-family: 'Jost', sans-serif;
-    width: 100vw;
+
 }
 
 *{
@@ -88,22 +89,35 @@ html{
     margin: 0px;
     font-family: Jost;
     box-sizing: border-box;
+    color: var(---dark)
 }
 
 body{
     margin: 0;
     padding: 0;
-    background-image: url(../img/background.png);
+    background-color: var(--primaryL2);
     background-position: center top;
-    width: 100vw;
     /* overflow-x: hidden; */
 }
+
+h1{
+    font-size: var(--h1);
+}
+
+h2{
+    font-size: var(--h2);
+}
+
+h3{
+    font-size: var(--h3);
+}
+
 /* --------------------------------------Header---------------*/
 
 header{
     display: flex;
     height: 56px;
-    width: 100vw;
+    width: 100%;
     padding: 0 16px;
     background: var(--dark) ;
     justify-content:space-between;
@@ -121,8 +135,9 @@ header a{
     display:flex;
 }
 
-header h1{
-    font-size: 36px;
+header li{
+    width: 120px;
+    text-align:center;
 }
 
 .header-logo-home{
@@ -149,7 +164,12 @@ header h1{
 
 .header-login{
     font-size: 26px;
-    
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: var(--h2);
+    color: var(--primary);
+    font-weight: bold;
 }
 
   
@@ -197,7 +217,7 @@ header h1{
     display: none;
     position: absolute;
     height: 110vh;
-    width: 100vw;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -213,11 +233,13 @@ header h1{
 .login.show{
     transform: translate(-50%, -50%);
     display: flex;
-
+    transition: 1s;
+    visibility: visible;
 }
 
 .login{
     display: flex; /* flex*/
+    align-items: center;
     flex-direction:  column;
     width: 860px ;
     height: 435px ; 
@@ -229,6 +251,12 @@ header h1{
     transform: translate(200%, -50%);
     z-index: 6;
     transition: 1s;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.login h1{
+    margin-top: 8px;
 }
 
 
@@ -246,17 +274,216 @@ header h1{
 }
 
 .login > form > input{
+    margin-top: 8px;
     width: 355px;
     height: 40px;
     border: none;
     border-bottom: 4px solid var(--secondaryL1);
+    padding-left: 8px;
 }
 
-.button{
+.login > form > label{
+    margin-top: 24px ;
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.login > form >input{
+    margin: 8px 0 ;
+    font-size: var(--text);
+}
+
+.login-button{
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 110px;
+    height: 50px;
+    background-color: var(--agree);
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.close-div{
+    width: 100%;
     display: flex;
-    justify-content:center;
+    justify-content: flex-end;
+    height: 20px;
+    background: none;
+}
+
+.close{
+    border: none;
+    background: none;
+    color: var(--danger);
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 8px;
+    padding-top: 2px;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.dha{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 20px;
+    background: none;
+    color: var(--dark);
+    font-size: var(--underlined);
+    text-decoration: underline;
+    padding-right: 40px;
+    padding-bottom: 24px;
+}
+
+.dha > button{
+    background: none;
+    border: none;
+    font-size: var(--underlined);
+    cursor: pointer;
+}
+
+
+/* --------------------------------------Register---------------*/
+.register.show{
+    transform: translate(-50%, -50%);
+    display: flex;
+    transition: 1s;
+    visibility: visible;
+}
+
+.register{
+    display: flex; /* flex*/
+    align-items: center;
+    flex-direction:  column;
+    width: 860px ;
+    height: 600px ; 
+    background-image: url(../img/background.png);
+    background-position: center top;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(200%, -50%);
+    z-index: 6;
+    transition: 1s;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.register h1{
+    margin-top: 8px;
+}
+
+
+.register form{
+    display: flex;
+    flex-direction:  column; 
+    align-items: flex-start;
+    width: 355px;
+}
+
+.register form > div{
+    display: flex;
+    justify-content:space-between;
     width: 100%;
 }
+
+.register > form > input{
+    margin-top: 8px;
+    width: 355px;
+    height: 40px;
+    border: none;
+    border-bottom: 4px solid var(--secondaryL1);
+    padding-left: 8px;
+}
+
+.register > form > label{
+    margin-top: 12px ;
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.register > form >input{
+    margin: 8px 0 ;
+    font-size: var(--text);
+}
+
+.register-button{
+    margin: 0 auto;
+    margin-top: 32px;
+    width: 110px;
+    height: 50px;
+    background-color: var(--accent);
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.close-div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 20px;
+    background: none;
+}
+
+.close{
+    border: none;
+    background: none;
+    color: var(--danger);
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 8px;
+    padding-top: 2px;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.dha{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 20px;
+    background: none;
+    color: var(--dark);
+    font-size: var(--underlined);
+    text-decoration: underline;
+    padding-right: 40px;
+    padding-bottom: 24px;
+}
+
+
+
+
+/* --------------------------------------Busqueda---------------*/
+
+.busqueda{
+    width:670px ;
+    height: 100vh;
+    background-color: var(--secondary);
+    top: 59.4%;
+    left: 50%;
+    transform: translate(-250%, -50%);
+    position: absolute;
+    z-index: 5;
+}
+
+.busqueda.show{
+    transform: translate(-115%, -50%);
+    display: flex;
+    transition: 1s;
+    visibility: visible;
+}
+
+
+
 
 
 
@@ -330,7 +557,7 @@ header h1{
 .cards{
     display: flex;
     align-items: center;
-    width: 74vw;
+
     margin: 2rem;
     flex-direction: column;
 }
@@ -345,7 +572,18 @@ header h1{
     display: flex;
     height: 190px;
     padding: 0 10px;
+    border-radius: 10px;
 }
+
+.img-inner-games-categories{
+    background-color: var(--secondary50pc);
+    display: flex;
+    float: left;
+    height: 190px;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
 
 /* .img-inner-games a{
     background-image: url(../img/game1.jpg);
@@ -397,7 +635,7 @@ aside{
 .flex{
     display: flex;
     margin: 0 auto;
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -442,10 +680,6 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.footer-social-component h1{
-    font-size: 32px;
 }
 
 .social-media{
