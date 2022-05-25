@@ -14,12 +14,17 @@
 <body>
     
     <header>
-        <a href="" class="header-logo-home">
+        <a href="index.html" class="header-logo-home">
             <img src="./img/acorn.png" 
                 alt="acorn.logue"
                 class="footer-logo">
                 <h1>AcornStudios</h1>
         </a>
+
+        <button id="openBusqueda" class="header-busqueda">
+            <img src="./img/busqueda.png" alt="acorn.logue" class="footer-logo">
+        </button>
+        
 
         <ul class="header-categories">
             <li><a href="categorie.html">Action</a></li>
@@ -28,7 +33,7 @@
             <li><a href="categorie.html">Survival</a></li>
             <li><a href="categorie.html">Terror</a></li>
             <li>
-                <a href="">ver mas ˬ </a>
+                <a href="">Ver mas ˬ </a>
                 <ul class="vertical-drop-menu">
                     <li><a href="categorie.html">Deportivo</a></li>
                     <li><a href="categorie.html">Estrategia</a></li>
@@ -40,7 +45,10 @@
             </li>
         </ul>
 
-        <button id="showLogin" class="header-login">Login</button>
+        <div class="header-logo-home" id="showLogin">
+            <button class="header-login">login</button>
+            <img src="./img/user.png" alt="acorn.logue" class="footer-logo">
+        </div>
     </header>
 
 
@@ -48,37 +56,109 @@
 
 
 
-    <!-- Login -->
 
-    <div class="overlay" id="overlay"></div>
 
-    <article class="login" id="login">
-        <div class="close-div">
-            <button class="close" id="closeLogin">X</button>
-        </div>
-        <h1> Login </h1>
-        <form action="">
-            <label for="">Email address</label>
-            <input type="text" class="input-popoup" placeholder="Enter your email here">
 
-            <label for="">Password</label>
-            <input type="text" class="input-popoup" placeholder="Enter your password here">
 
-            <div>
-                <span><input type="checkbox"> Remember</span>
-                
-                <a href="">i forget my password</a>
+
+
+
+
+
+        <!-- Login -->
+    
+        <div class="overlay" id="overlay"></div>
+    
+        <article class="login" id="login">
+            <div class="close-div">
+                <button class="close" id="closeLogin">X</button>
             </div>
-           
-            <button class="login-button">Enjoy</button>
-           
-            
-        </form>
-        <div class="dha">
-            <a href="">Don't have account</a>
-        </div>
+            <h1> Login </h1>
+            <form action="">
+                <label for="">Email address</label>
+                <input type="text" class="input-popoup" placeholder="Enter your email here">
+    
+                <label for="">Password</label>
+                <input type="text" class="input-popoup" placeholder="Enter your password here">
+    
+                <div>
+                    <span><input type="checkbox"> Remember</span>
+                    
+                    <a href="">i forget my password</a>
+                </div>
+               
+                <a href="user.html" class="login-button">Enjoy</a>
+               
+                
+            </form>
+            <div class="dha">
+                <button id="goToRegister">Don't have account</button>
+            </div>
+    
+        </article>
+    
+    
+    
+         <!-- Register -->
+        <article class="register" id="register">
+            <div class="close-div">
+                <button class="close" id="closeRegister">X</button>
+            </div>
+            <h1> Register </h1>
+            <form action="">
+                <label for="">Email address</label>
+                <input type="text" class="input-popoup" placeholder="Enter your email here">
+    
+                <label for="">User name</label>
+                <input type="text" class="input-popoup" placeholder="Enter your user name here">
+                <label for="">Password</label>
+                <input type="text" class="input-popoup" placeholder="Enter your password here">
+    
+                <label for="">Repeat your password</label>
+                <input type="text" class="input-popoup" placeholder="Confirm your password here">
+               
+                <a href="user.html class="register-button">Create Acount</a>
+               
+                
+            </form>
+            <div class="dha">
+                <button id="goToLogin">Already have account</button>
+            </div>
+    
+        </article>
+    
+    
 
-    </article>
+
+
+        <!-- Desplegable busqueda -->
+    
+        <article id="busqueda" class="busqueda">
+            <div class="close-div">
+                <button class="close" id="closeRegister">X</button>
+            </div>
+    
+        </article>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- Page -->
@@ -102,9 +182,121 @@
         <!-- Main component-->
         <article class="cards">
 
-                <section>
-                    <h2>Suggested games</h2>
+                    <a href="categorie.html" class="name-categorie">Games of this category</a>
                     <div class="img-inner-games-categories">
+
+
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game3.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+
+
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+                        
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game3.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                       
+                        </div>
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+                        
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                       
+                        </div>
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
 
                         <div class="contenedor">
                             <figure>
@@ -116,15 +308,28 @@
                         </div>
                         <div class="contenedor">
                             <figure>
-                                <img src="img/game1.jpg" alt="">
+                                <img src="img/game3.jpg" alt="">
                                 <div class="capa">
                                     <h2>Nombre del juego</h2>                
                                 </div>
                             </figure>
                         </div>
+
+
+
+
                         <div class="contenedor">
                             <figure>
-                                <img src="img/game1.jpg" alt="">
+                                <img src="img/game3.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
                                 <div class="capa">
                                     <h2>Nombre del juego</h2>                
                                 </div>
@@ -133,12 +338,40 @@
                         
                         <div class="contenedor">
                             <figure>
-                                <img src="img/game1.jpg" alt="">
+                                <img src="img/game3.jpg" alt="">
                                 <div class="capa">
                                     <h2>Nombre del juego</h2>                
                                 </div>
                             </figure>
                         </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                       
+                        </div>
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
                         <div class="contenedor">
                             <figure>
                                 <img src="img/game1.jpg" alt="">
@@ -149,20 +382,66 @@
                         </div>
                         <div class="contenedor">
                             <figure>
+                                <img src="img/game3.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
                                 <img src="img/game1.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                       
+                        </div>
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game3.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
                                 <div class="capa">
                                     <h2>Nombre del juego</h2>                
                                 </div>
                             </figure>
                         </div>
                         
-                                        
+                       
+                    </div>
+                           
+                    
+                    <div class="pagination">
+                        <button class="pagination-button">1</button>
+                        <button class="pagination-button">2</button>
+                        <button class="pagination-button">3</button>
+                        <button class="pagination-button">4</button>
+                        <button class="pagination-button">5</button>
+                    </div>
         </article>
         
     </div>
     
-
-
+    
+    
 
 
 

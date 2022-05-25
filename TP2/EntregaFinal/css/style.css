@@ -120,12 +120,13 @@ header{
     width: 100%;
     padding: 0 16px;
     background: var(--dark) ;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     color: var(--primary);
-    position: sticky    ;
+    position: sticky;
     top: 0px;
     z-index: 5;
+    overflow: hidden;
 
 }
 
@@ -138,12 +139,16 @@ header a{
 header li{
     width: 120px;
     text-align:center;
+    transition: 1s;
 }
+
+
 
 .header-logo-home{
     display: flex;
     justify-content:  center;
     align-items: center;
+    cursor: pointer;
     
 }
 
@@ -170,17 +175,72 @@ header li{
     font-size: var(--h2);
     color: var(--primary);
     font-weight: bold;
+    margin-right: 8px ;
 }
 
-  
+.header-busqueda{
+    background: none;
+    border: none;
+    display:flex;
+    align-items: center;    
+    cursor: pointer;
+}  
+
 /*VERTICAL DROPDOWN*/
 
+.header-categories > li:hover{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 1s;
+    
+} 
+
+.vertical-drop-menu{
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 140px;
+    background-color: var(--dark);
+    text-align: center;
+    transform: translate(-7%, 0%);
+    
+}
+
+.vertical-drop-menu a{
+    text-decoration: none;
+    margin: 0;
+}
+
+.vertical-drop-menu li{
+    
+    padding: 5px;
+    margin: 10px;
+    border-bottom: 2px solid var(--primary);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80px;
+}
+
+
+
+
+
+/* antes */
 .header-categories > li:hover > .vertical-drop-menu{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 10;
 } 
 
 .vertical-drop-menu{
@@ -211,31 +271,38 @@ header li{
     text-align: center;
 }
 
+
+
+
 /* --------------------------------------Login - overlays---------------*/
 
 .overlay{
     display: none;
+    background-color: var(--overlay);
     position: absolute;
     height: 110vh;
     width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    visibility: hidden;
     z-index: 6;
-    background-color: var(--overlay);
-    transition: 1s;
 }
 
 .overlay.show{
     display: flex;
+    visibility: visible;
+    z-index: 6;
 }
 
 .login.show{
-    transform: translate(-50%, -50%);
     display: flex;
-    transition: 1s;
     visibility: visible;
+    position: fixed;
+    animation: showLogin 6s linear;
+    transform: translate(-50%, -50%);
+    transition: 1s;
 }
+
+
 
 .login{
     display: flex; /* flex*/
@@ -248,11 +315,62 @@ header li{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(200%, -50%);
+    transform: translate(-50%, -200%);
     z-index: 6;
-    transition: 1s;
+    transition: 0.2s;
     border-radius: 10px;
     visibility: hidden;
+    overflow: hidden;
+}
+
+@keyframes showLogin{
+    0%{ 
+        width: 200px ;
+        height: 108px ; 
+        transform: translate(-50%, -600%);
+    } 
+
+    /* piso */
+    12%{
+        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) perspective(300px) rotateX(0deg);
+    }
+    /* maximo 1*/
+    17.5%{
+        transform: translate(-50%, -200%) perspective(300px) rotateX(180deg);
+    }
+    /* piso*/
+    23%{
+        transform: translate(-50%, -50%) rotateX(360deg);
+    }
+
+    
+     /* maximo2 */
+    27%{
+        transform: translate(-50%, -110%) rotate(15deg);
+    }
+    30%{
+        transform: translate(-50%, -110%) rotate(-15deg);
+    }
+    /* piso*/
+    32%{
+        transform: translate(-50%, -50%) rotateX(360deg);
+    }
+    34%{
+        width: 200px ;
+        height: 108px ; 
+        transform: translate(-50%, -50%) rotateX(360deg);
+    }
+    40%{
+        height: 435px ;
+        width:860px;
+        transform: translate(-50%, -50%) rotateX(360deg);
+    }
+    100%{
+        height: 435px ;
+        width:860px;
+        transform: translate(-50%, -50%) rotateX(360deg);
+    }
 }
 
 .login h1{
@@ -303,6 +421,9 @@ header li{
     border: none;
     font-size: 26px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .close-div{
@@ -352,8 +473,10 @@ header li{
 .register.show{
     transform: translate(-50%, -50%);
     display: flex;
-    transition: 1s;
+    transition: 0.4s;
     visibility: visible;
+    position: fixed;
+
 }
 
 .register{
@@ -367,11 +490,12 @@ header li{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(200%, -50%);
+    transform: translate(-50%, -200%);
     z-index: 6;
-    transition: 1s;
+    transition: 0.3s;
     border-radius: 10px;
     visibility: hidden;
+
 }
 
 .register h1{
@@ -459,38 +583,34 @@ header li{
     padding-bottom: 24px;
 }
 
-
-
-
 /* --------------------------------------Busqueda---------------*/
 
 .busqueda{
     width:670px ;
     height: 100vh;
     background-color: var(--secondary);
-    top: 59.4%;
-    left: 50%;
-    transform: translate(-250%, -50%);
+    top: 56px;
+    left: 0px;
+    transform: translate(-115%, 0%);
+    transition: 0.2s;
     position: absolute;
     z-index: 5;
+    visibility: hidden;
 }
 
 .busqueda.show{
-    transform: translate(-115%, -50%);
+    transform: translate(0%, 0%);
     display: flex;
-    transition: 1s;
+    position: fixed;
+    transition: 0.4s;
     visibility: visible;
 }
-
-
-
-
-
 
 /* --------------------------------------Main---------------*/
 
 .contenedor{
-    width: 100%;
+    margin:4px;
+    width: 1fr;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -556,7 +676,7 @@ header li{
 
 .cards{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     margin: 2rem;
     flex-direction: column;
@@ -565,6 +685,14 @@ header li{
 .cards section{
     margin-top: 16px;
     width: 100%;
+}
+
+.name-categorie{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: var(--h1);
+    font-weight: bold;
+    color: var(--secondary);
 }
 
 .img-inner-games{
@@ -577,39 +705,14 @@ header li{
 
 .img-inner-games-categories{
     background-color: var(--secondary50pc);
-    display: flex;
-    float: left;
-    height: 190px;
-    padding: 0 10px;
-    border-radius: 10px;
-}
-
-
-/* .img-inner-games a{
-    background-image: url(../img/game1.jpg);
-    background-size: cover;
-    width: 260px;
-    height: 180px;
-} */
-
-
-/*
-aside{
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 3rem;
-    margin: 0px;
-    width: 20vw;
-    left: 0;
     
-    background-color: var(--secondary);
+    padding: 10px 10px;
+    border-radius: 10px;
 
-    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr  1fr;;
+    grid-auto-rows: 1fr;
 }
-*/
 
 aside{
     width: 24vw;
@@ -706,8 +809,77 @@ footer{
     color: var(--primaryL2);
 }
 
+/* ------------------------------------ */
+
+.pagination{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.pagination-button{
+    width:30px;
+    height: 30px;
+    padding: 4px;
+    border: none;
+    margin: 0px 2px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-profile{
+    padding: 0px 8px;
+    margin-top:24px;
+    width: 1025px;
+    height: 419px;
+    background-color: var(--secondary75pc);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+.info-profile img{
+    width: 339px;
+    height: 339px;
+    margin-left:64px;
+    
+}
+
+.info-profile-items{
+    margin-left: 40px;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.info-profile-items div{
+    margin: 24px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 
 
+.profile-item-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-item-value{
+    padding-left: 8px;
+}
 /* 
 
 
