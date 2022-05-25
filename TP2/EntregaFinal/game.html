@@ -22,7 +22,7 @@
         </a>
 
         <button id="openBusqueda" class="header-busqueda">
-            <img src="./img/busqueda.png" alt="acorn.logue" class="footer-logo">
+            <img src="./img/search.png" alt="acorn.logue" class="footer-logo">
         </button>
         
 
@@ -45,7 +45,7 @@
             </li>
         </ul>
 
-        <div class="header-logo-home" id="showLogin">
+        <div class="header-login-loge" id="showLogin">
             <button class="header-login">login</button>
             <img src="./img/user.png" alt="acorn.logue" class="footer-logo">
         </div>
@@ -76,25 +76,25 @@
             <h1> Login </h1>
             <form action="">
                 <label for="">Email address</label>
-                <input type="text" class="input-popoup" placeholder="Enter your email here">
-    
+                <input type="text" class="input-popup" placeholder="Enter your email here">
+
                 <label for="">Password</label>
-                <input type="text" class="input-popoup" placeholder="Enter your password here">
-    
+                <input type="text" class="input-popup" placeholder="Enter your password here">
+
                 <div>
                     <span><input type="checkbox"> Remember</span>
                     
                     <a href="">i forget my password</a>
                 </div>
-               
+            
                 <a href="user.html" class="login-button">Enjoy</a>
-               
+            
                 
             </form>
             <div class="dha">
                 <button id="goToRegister">Don't have account</button>
             </div>
-    
+
         </article>
     
     
@@ -137,12 +137,118 @@
             <div class="close-div">
                 <button class="close" id="closeBusqueda">X</button>
             </div>
+            <div class="sorter">
+                <div class="filter">
+                    <a href="">Filter By ˬ </a>
+                </div>
+                <div class="filter">
+                    <a href="">Sort By ˬ </a>
+                </div>
+                <div class="browser">
+                    <input type="text" class="input-browser" placeholder="Search">
+                </div>
+            </div>
+            <div class="view-games">
+    
+                <div class="view-browser">
+                    
+                    <a href="">Sugestions</a>
+                    
+                    <div class="visualization">
+                        <!-- Hacete el grid mati -->
+                        <div class="contenedor cont-browser">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                            
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                            
+                        </div>
+                        <div class="contenedor cont-browser">
+                            <figure>
+                                <img src="img/game2.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                            <figure>
+                                <img src="img/game3.jpg" alt="">
+                                <div class="capa">
+                                    <h2>Nombre del juego</h2>                
+                                </div>
+                            </figure>
+                            
+                        </div>
+                        
+                    </div>
+                    <a href="">Most played</a>
+                    <div class="visualization">
+                        <!-- Hacete el grid mati -->
+                    </div>
+                </div>
+                <div class="scroll">
+    
+                </div>
+            </div>
+            
+            <a href="" class="all-games">All the games</a>
+            
+    
     
         </article>
     
 
-
-
+        <div class="game-info-popup" id="gameInfoPopup">
+    
+            <!--Informacion-->
+            <div class="container-up-game-info">
+    
+                <div class="grande-up">
+    
+                    <div>
+    
+                        <div class="nombre-del-juego-popup">
+                            nombre del juego
+                        </div>
+    
+                    
+                        <div class="flex-popup-info-games">
+    
+                            <div>
+                                how to play
+                                <div></div>
+                            </div>
+    
+                            <div class="controls-info-games">
+                                controls
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <div class="links-info-games">
+                        links
+                    </div>
+    
+                </div>
+    
+    
+    
+                <button class="lets-play">
+    
+                </button>
+    
+            </div>
+        </div>
 
 
 
@@ -173,7 +279,7 @@
             <section>
                 <div class="game-page-info">
                     <h1>Counter-Strike Global Offensive</h1>
-                    <button class="how-to-play-page"> how to play</button>
+                    <button class="how-to-play-page" id="openGameInfo"> how to play</button>
                 </div>
                 
 
@@ -182,9 +288,9 @@
                     
                 </div>
                 <div class="buttons-game-down">
-                    <button>asd</button>
-                    <button>asd</button>
-                    <button>asd<button>
+                    <img src="./img/noFav.png" alt="">
+                    <img src="./img/share.png" alt="">
+                    <img src="./img/expand.png" alt="">
                 </div>
             </section>
 
@@ -195,10 +301,9 @@
             <section>
                 <a href="categorie.html" class="name-categorie">Related games</a>
                 <div class="img-inner-games">
-
                     <div class="contenedor">
                         <figure>
-                            <img src="img/game1.jpg" alt="">
+                            <img src="img/game2.jpg" alt="">
                             <div class="capa">
                                 <h2>Nombre del juego</h2>                
                             </div>
@@ -207,8 +312,13 @@
                     <div class="contenedor">
                         <figure>
                             <img src="img/game1.jpg" alt="">
-                            <div class="capa">
-                                <h2>Nombre del juego</h2>                
+                            <div class="capa" id="openGameInfo">
+                                <h2>Nombre del juego</h2> 
+                                <div class="play-fav">   
+
+                                        <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                        <a href=""><img src="./img/play.png" alt="" class="play-contenedor"></a>
+                                </div>               
                             </div>
                         </figure>
                     </div>
@@ -296,14 +406,21 @@
 
 
         <!-- Barra lateral de info + publicidad-->
-        <aside>
-
-            <div class="info-aside">
-                <h1>img-Info</h1>
+        <aside class="aside-game">
+            <h1>game of the week</h1>
+            <div class="info-aside-game-page">
+                <div class="contenedor">
+                    <figure>
+                        <img src="img/game2.jpg" alt="">
+                        <div class="capa">
+                            <h2>Nombre del juego</h2>                
+                        </div>
+                    </figure>
+                </div>
             </div>
 
-            <div class="info-aside">
-                <h1>img-Info</h1>
+            <div class="info-aside-publi">
+                <img src="img/casino.jpeg" alt="casino">
                 <!-- <iframe src="mash/centralmedio.html" name="centralmedio" width="990" marginwidth="0" height="280" marginheight="0" scrolling="no" frameborder="0" id="centralmedio" ></iframe> -->
             </div>
             
@@ -354,9 +471,9 @@
         <article class="footer-social-component">
     
             <div class="social-media">
-                <a href=""><img src="./img/instagram-icon.png" alt="instagram-icon"></a>
-                <a href=""><img src="./img/facebook-icon.png" alt="facebook-icon"></a>
-                <a href=""><img src=".img/twitter-icon" alt="twitter-icon"></a>
+                <a href=""><img src="./img/instagram.png" alt="instagram-icon"></a>
+                <a href=""><img src="./img/facebook.png" alt="facebook-icon"></a>
+                <a href=""><img src="./img/twitter.png" alt="twitter-icon"></a>
             </div>
     
             <h1>

@@ -24,9 +24,9 @@
     --overlay:#181715b6;
     --overlaygames: #652ba3c4;
     --overlaySecondary: #61362136;
-    --overGame: linear-gradient(180deg, rgba(247,208,138,0.1) 36%, rgba(44,38,30,1) 100%);
+    --overGame: linear-gradient(180deg,  rgba(44,38,30,1) 0%, rgba(247,208,138,0.1) 130%);
     --backLineal: linear-gradient(180deg, rgba(247,208,138,1) 0%, rgb(213, 159, 92) 100%);
-    
+    --backScroll: #f7d18a82;
 
     /* Font Size */
     --h10: 26px;
@@ -146,10 +146,17 @@ header li{
 
 .header-logo-home{
     display: flex;
-    justify-content:  center;
+    justify-content: space-around;
     align-items: center;
     cursor: pointer;
-    
+    width: 300px;  
+}
+
+.header-login-loge{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
 }
 
 .header-categories{
@@ -293,23 +300,12 @@ header li{
     z-index: 6;
 }
 
-.login.show{
-    display: flex;
-    visibility: visible;
-    position: fixed;
-    animation: showLogin 6s linear;
-    transform: translate(-50%, -50%);
-    transition: 1s;
-}
-
-
-
 .login{
     display: flex; /* flex*/
     align-items: center;
     flex-direction:  column;
     width: 860px ;
-    height: 435px ; 
+    height: 455px ; 
     background-image: url(../img/background.png);
     background-position: center top;
     position: absolute;
@@ -323,6 +319,15 @@ header li{
     overflow: hidden;
 }
 
+.login.show{
+    display: flex;
+    visibility: visible;
+    position: fixed;
+    animation: showLogin 2.5s linear;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+}
+
 @keyframes showLogin{
     0%{ 
         width: 200px ;
@@ -331,43 +336,52 @@ header li{
     } 
 
     /* piso */
-    12%{
+    20%{
         transform: translate(-50%, -50%);
         transform: translate(-50%, -50%) perspective(300px) rotateX(0deg);
     }
     /* maximo 1*/
-    17.5%{
+    33.75%{
         transform: translate(-50%, -200%) perspective(300px) rotateX(180deg);
     }
     /* piso*/
-    23%{
+    47.5%{
         transform: translate(-50%, -50%) rotateX(360deg);
     }
 
     
      /* maximo2 */
-    27%{
-        transform: translate(-50%, -110%) rotate(15deg);
+    57.4%{
+        transform: translate(-50%, -110%) rotateZ(15deg);
     }
-    30%{
-        transform: translate(-50%, -110%) rotate(-15deg);
+
+    60%{
+        transform: translate(-50%, -110%) rotateZ(5deg);
+    }
+
+    62.5%{
+     transform: translate(-50%, -110%) rotateZ(-5deg);
+    }
+
+    65%{
+        transform: translate(-50%, -110%) rotateZ(-15deg);
     }
     /* piso*/
-    32%{
+    70%{
         transform: translate(-50%, -50%) rotateX(360deg);
     }
-    34%{
+    75%{
         width: 200px ;
         height: 108px ; 
         transform: translate(-50%, -50%) rotateX(360deg);
     }
-    40%{
-        height: 435px ;
+    90%{
+        height: 455px ;
         width:860px;
         transform: translate(-50%, -50%) rotateX(360deg);
     }
     100%{
-        height: 435px ;
+        height: 455px ;
         width:860px;
         transform: translate(-50%, -50%) rotateX(360deg);
     }
@@ -391,13 +405,17 @@ header li{
     width: 100%;
 }
 
-.login > form > input{
+.input-popup{
     margin-top: 8px;
     width: 355px;
     height: 40px;
     border: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     border-bottom: 4px solid var(--secondaryL1);
     padding-left: 8px;
+    margin: 8px 0 ;
+    font-size: var(--text);
 }
 
 .login > form > label{
@@ -405,11 +423,6 @@ header li{
     color: var(--dark);
     font-size: 20px;
     font-weight: bold;
-}
-
-.login > form >input{
-    margin: 8px 0 ;
-    font-size: var(--text);
 }
 
 .login-button{
@@ -437,7 +450,7 @@ header li{
 .close{
     border: none;
     background: none;
-    color: var(--danger);
+    color: var(--light);
     font-weight: bold;
     font-size: 20px;
     padding-right: 8px;
@@ -516,25 +529,11 @@ header li{
     width: 100%;
 }
 
-.register > form > input{
-    margin-top: 8px;
-    width: 355px;
-    height: 40px;
-    border: none;
-    border-bottom: 4px solid var(--secondaryL1);
-    padding-left: 8px;
-}
-
 .register > form > label{
     margin-top: 12px ;
     color: var(--dark);
     font-size: 20px;
     font-weight: bold;
-}
-
-.register > form >input{
-    margin: 8px 0 ;
-    font-size: var(--text);
 }
 
 .register-button{
@@ -556,20 +555,6 @@ header li{
     background: none;
 }
 
-.close{
-    border: none;
-    background: none;
-    color: var(--danger);
-    font-weight: bold;
-    font-size: 20px;
-    padding-right: 8px;
-    padding-top: 2px;
-}
-
-.close:hover{
-    cursor: pointer;
-}
-
 .dha{
     width: 100%;
     display: flex;
@@ -586,8 +571,10 @@ header li{
 /* --------------------------------------Busqueda---------------*/
 
 .busqueda{
+    display: flex;
+    flex-direction: column;
     width:670px ;
-    height: 100vh;
+    height: 100vh;    
     background-color: var(--secondary);
     top: 56px;
     left: 0px;
@@ -606,10 +593,80 @@ header li{
     visibility: visible;
 }
 
+.sorter{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 32px;
+    
+}
+
+.input-browser{
+    margin-top: 8px;
+    width: 355px;
+    height: 40px;
+    border: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: 4px solid var(--primary);
+    padding-left: 8px;
+
+    font-size: var(--text);
+}
+
+.filter > a{
+    display:block;
+    border-bottom: 2px solid var(--primary);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.view-games{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 16px 32px 32px 32px;
+}
+
+.view-browser{
+    display: flex;
+    flex-direction: column;
+    width: 586px;
+}
+
+.view-browser > a{
+    margin-top: 16px;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: var(--subtitle);
+}
+
+.cont-browser >figure{
+    margin: 16px
+}
+
+.scroll{
+    margin-top: 16px;
+    background-color: var(--backScroll);
+    width: 20px;
+    height: 460px;
+    border-radius: 2px;
+}
+
+.all-games{
+    display: flex;
+    justify-content: flex-end;
+    color: var(--primary);
+    font-size: var(--underlined);
+    float: right;
+    margin-right: 32px;
+}
+
 /* --------------------------------------Main---------------*/
 
 .contenedor{
-    margin:4px;
+    margin: 4px;
     width: 1fr;
     display: flex;
     justify-content: center;
@@ -632,22 +689,48 @@ header li{
 }
 
 .contenedor figure .capa{
+    display: flex;
     position: absolute;
     top: 0;
-    
     width: 100%;
     height: 100%;
     background: var(--overGame);
     transition: all 300ms ease-out;
     opacity: 0;
     visibility: hidden;
+    border: none;
    
+}
+
+.contenedor figure .fav-contenedor{
+    width: 36px;
+    height: 60px;
+    margin-right: 18px;
+    transition: all 500ms ease-out;
+}
+
+.contenedor figure .play-contenedor{
+    width: 40px;
+    height: 40px;
+    margin: 0 16px 16px 0;
+    transition: all 500ms ease-out;
+}
+
+.play-fav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+
+.fav-contenedor{
+    size: 0;
 }
 
 .contenedor figure .capa{
     position: absolute;
     top: 0;
-    
     width: 100%;
     height: 100%;
     background: var(--overGame);
@@ -663,7 +746,7 @@ header li{
 }
 
 .contenedor figure:hover > .capa h2{
-    margin-top:100px;
+    margin-top:10px;
     margin-bottom: 10px;
 }
 
@@ -915,26 +998,77 @@ footer{
 }
 
 .buttons-game-down{
+    height: 72px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    background-color: var(--secondaryD1);
+    padding-right: 40px;
+    align-items: center;
 }
 
-.buttons-game-down button{
+.buttons-game-down img{
     width: 42px;
     height: 42px;
+    margin-left: 40px;
 }
+
+.aside-game{
+    overflow: hidden;
+}
+
+.aside-game h1{
+    margin-left:32px;
+    height: min-content;
+    font-size: 32px;
+}
+
+
+.info-aside-game-page{
+    margin: 2rem;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    padding: 2rem;
+    height: min-content;
+    border-radius: 5px;
+    background-color: var(--secondary75pc);
+}
+
+.info-aside-publi{
+    margin: 2rem;
+    margin-top: 64px;
+    margin-bottom: 10px;
+    
+    height: min-content;
+    border-radius: 5px;
+    background-color: var(--secondary75pc);
+}
+
+.info-aside-publi img{
+    height: 471px;
+    width: 100%;
+}
+
 
 /* ------------------Popup gameInfo------------------ */
 
+.game-info-popup.show{
+    transform: translate(-50%, -50%);
+}
+
 .game-info-popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
     width: 1217px;
     height: 95vh;
-    background-color: var(--backLineal);
+    background-image: url(../img/background.png);
     border: 1px black solid;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    z-index: 7;
 }
 
 .container-up-game-info{

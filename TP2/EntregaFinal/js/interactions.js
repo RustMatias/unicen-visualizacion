@@ -84,3 +84,15 @@ document.querySelector("#closeBusqueda").addEventListener( "click", ()=>{
 
 }) 
 
+document.querySelector("#openGameInfo").addEventListener( "click", ()=>{
+
+    
+    //agarra del dom
+    let gameInfo = document.querySelector("#gameInfoPopup");
+    console.log(gameInfo);
+    //agrega la clase
+    gameInfo.classList.toggle("show");
+
+}) 
+
+
