@@ -25,7 +25,7 @@
     --overlaygames: #652ba3c4;
     --overlaySecondary: #61362136;
     --overGame: linear-gradient(180deg, rgba(247,208,138,0.1) 36%, rgba(44,38,30,1) 100%);
-    --backLineal: linear-gradient(180deg, rgba(247,208,138,1) 0%, rgba(210,165,109,1) 100%);
+    --backLineal: linear-gradient(180deg, rgba(247,208,138,1) 0%, rgb(213, 159, 92) 100%);
     
 
     /* Font Size */
@@ -828,6 +828,8 @@ footer{
     color: var(--light);
 }
 
+
+/* -------------------profile----------------- */
 .profile{
     display: flex;
     flex-direction: column;
@@ -880,6 +882,113 @@ footer{
 .profile-item-value{
     padding-left: 8px;
 }
+
+
+/* ------------------game page------------------ */
+.game-page-info{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 12px ;
+    padding: 0px;
+}
+
+.game-page-info h1{
+    font-size: 26px;
+}
+
+.game-page-info button{
+    width: 118px;
+    height: 30px;
+    border: none;
+    background-color: var(--accent);
+    color: var(--light);
+    cursor: pointer;
+}
+
+.game-on{
+    background-color: var(--light);
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.buttons-game-down{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons-game-down button{
+    width: 42px;
+    height: 42px;
+}
+
+/* ------------------Popup gameInfo------------------ */
+
+.game-info-popup{
+    width: 1217px;
+    height: 95vh;
+    background-color: var(--backLineal);
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.container-up-game-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: min-content;
+}
+
+.grande-up{
+    display: flex;
+    margin-left: 32px ;
+}
+
+.nombre-del-juego-popup{
+    width: 100%;
+    height: 116px;
+    margin-bottom: 24px;
+    background-color: var(--overlaySecondary);
+}
+
+
+.lets-play{
+    height: 255px;
+    width: 255px;
+    border: 50%;
+}
+
+.flex-popup-info-games{
+    display: flex;
+}
+
+.flex-popup-info-games div{
+    height: 245px;
+    width: 266px;
+    background-color: var(--overlaySecondary);
+}
+
+.controls-info-games{
+    margin-left: 24px;
+}
+
+
+.links-info-games{
+    width: 161px;
+    background-color: var(--overlaySecondary);
+    margin-left: 24px;
+}
+
+.galery img{
+    width: 395px;
+    height: 208px;
+}
+
 /* 
 
 

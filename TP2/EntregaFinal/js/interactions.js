@@ -8,7 +8,7 @@ document.querySelector("#showLogin").addEventListener( "click", ()=>{
     loginoverlay.classList.toggle("show");
     overlay.classList.toggle("show");
 
-}  ) 
+}) 
 document.querySelector("#closeLogin").addEventListener( "click", ()=>{
 
     let loginoverlay = document.querySelector("#login");
@@ -16,7 +16,7 @@ document.querySelector("#closeLogin").addEventListener( "click", ()=>{
 
     loginoverlay.classList.toggle("show");
     overlay.classList.toggle("show");
-}  ) 
+}) 
 
 document.querySelector("#overlay").addEventListener( "click", ()=>{
 
@@ -24,17 +24,14 @@ document.querySelector("#overlay").addEventListener( "click", ()=>{
     let overlay = document.querySelector("#overlay");
     let registeroverlay = document.querySelector("#register");
 
-
     loginoverlay.classList.toggle("show");
     overlay.classList.toggle("show");
     
     if(registeroverlay.classList != "register"){
         registeroverlay.classList.toggle("show");
     }
-    
-    
 
-}  )
+})
 
 
 
@@ -86,3 +83,4 @@ document.querySelector("#closeBusqueda").addEventListener( "click", ()=>{
     busqueda.classList.toggle("show");
 
 }) 
+
