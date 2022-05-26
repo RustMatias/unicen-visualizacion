@@ -27,20 +27,20 @@
         
 
         <ul class="header-categories">
-            <li><a href="categorie.html">Action</a></li>
-            <li><a href="categorie.html">Roleplay</a></li>
-            <li><a href="categorie.html">Rpg</a></li>
-            <li><a href="categorie.html">Survival</a></li>
-            <li><a href="categorie.html">Terror</a></li>
+            <li><button href="categorie.html" id="goToCategorie">Action</button></li>
+            <li><button href="categorie.html" id="goToCategorie">Roleplay</button></li>
+            <li><button href="categorie.html" id="goToCategorie">Rpg</button></li>
+            <li><button href="categorie.html" id="goToCategorie">Survival</button></li>
+            <li><button href="categorie.html" id="goToCategorie">Terror</button></li>
             <li>
-                <a href="">Ver mas ˬ </a>
+                <button href="">Ver mas ˬ </button>
                 <ul class="vertical-drop-menu">
-                    <li><a href="categorie.html">Deportivo</a></li>
-                    <li><a href="categorie.html">Estrategia</a></li>
-                    <li><a href="categorie.html">Simulacion</a></li>
-                    <li><a href="categorie.html">Musicales</a></li>
-                    <li><a href="categorie.html">Arcade</a></li>
-                    <li><a href="categorie.html">Terror</a></li>
+                    <li><button href="categorie.html" id="goToCategorie">Deportivo</button></li>
+                    <li><button href="categorie.html" id="goToCategorie">Estrategia</button></li>
+                    <li><button href="categorie.html" id="goToCategorie">Simulacion</button></li>
+                    <li><button href="categorie.html" id="goToCategorie">Musicales</button></li>
+                    <li><button href="categorie.html" id="goToCategorie">Arcade</button></li>
+                    <li><button href="categorie.html" id="goToCategorie">Terror</button></li>
                 </ul>
             </li>
         </ul>
@@ -74,7 +74,7 @@
                 <a href="">i forget my password</a>
             </div>
            
-            <a href="user.html" class="login-button">Enjoy</a>
+            <button href="user.html" class="login-button" id="goToUser">Enjoy</button>
            
             
         </form>
@@ -104,7 +104,7 @@
             <label for="">Repeat your password</label>
             <input type="text" class="input-popup" placeholder="Confirm your password here">
            
-            <a href="user.html class="register-button">Create Acount</a>
+            <button class="register-button" id="goToUser">Create Acount</button>
            
             
         </form>
@@ -150,30 +150,50 @@
                     <div class="contenedor cont-browser">
                         <figure>
                             <img src="img/game1.jpg" alt="">
-                            <div class="capa">
-                                <h2>Nombre del juego</h2>                
+                            <div class="capa" id="openGameInfo">
+                                <h2>Nombre del juego</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
                             </div>
                         </figure>
                         
                         <figure>
-                            <img src="img/game2.jpg" alt="">
-                            <div class="capa">
-                                <h2>Nombre del juego</h2>                
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa" id="openGameInfo">
+                                <h2>Nombre del juego</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
                             </div>
                         </figure>
                         
                     </div>
                     <div class="contenedor cont-browser">
                         <figure>
-                            <img src="img/game2.jpg" alt="">
-                            <div class="capa">
-                                <h2>Nombre del juego</h2>                
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa" id="openGameInfo">
+                                <h2>Nombre del juego</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
                             </div>
                         </figure>
                         <figure>
-                            <img src="img/game3.jpg" alt="">
-                            <div class="capa">
-                                <h2>Nombre del juego</h2>                
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa" id="openGameInfo">
+                                <h2>Nombre del juego</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
                             </div>
                         </figure>
                         
@@ -190,14 +210,20 @@
             </div>
         </div>
         
-        <a href="allgames.html" class="all-games">All the games</a>
+        <button  class="all-games" id="goToAllGames">All the games</button>
         
 
 
     </article>
 
 
-
+    <div class="loading-animation" id="loadingOverlay">
+        <img src="/img/acorn.png" alt="">
+        <p class="loading-text">Loading</p>  
+        <p class="dot1">.</p>
+        <p class="dot2">.</p>
+        <p class="dot3">.</p>
+    </div>
 
 
 
@@ -243,7 +269,80 @@
         <article class="cards">
 
                 <section>
-                    <a href="categorie.html" class="name-categorie">Suggested games</a>
+                    <button href="categorie.html" class="name-categorie" id="goToCategorie" >Suggested games</button>
+                    <div class="img-inner-games">
+
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa" id="openGameInfo">
+                                    <h2>Nombre del juego</h2> 
+                                    <div class="play-fav">   
+    
+                                        <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                        <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                    </div>               
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa" id="openGameInfo">
+                                    <h2>Nombre del juego</h2> 
+                                    <div class="play-fav">   
+    
+                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                            <a href="game.html" class="a-play-contenedor"><img src="./img/play.png" alt="" class="play-contenedor"></a>
+                                    </div>               
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa" id="openGameInfo">
+                                    <h2>Nombre del juego</h2> 
+                                    <div class="play-fav">   
+    
+                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                            <a href="game.html" class="a-play-contenedor"><img src="./img/play.png" alt="" class="play-contenedor"></a>
+                                    </div>               
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa" id="openGameInfo">
+                                    <h2>Nombre del juego</h2> 
+                                    <div class="play-fav">   
+    
+                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                            <a href="game.html" class="a-play-contenedor"><img src="./img/play.png" alt="" class="play-contenedor"></a>
+                                    </div>               
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="contenedor">
+                            <figure>
+                                <img src="img/game1.jpg" alt="">
+                                <div class="capa" id="openGameInfo">
+                                    <h2>Nombre del juego</h2> 
+                                    <div class="play-fav">   
+    
+                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                            <a href="game.html" class="a-play-contenedor"><img src="./img/play.png" alt="" class="play-contenedor"></a>
+                                    </div>               
+                                </div>
+                            </figure>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <section>
+                    <button href="categorie.html" class="name-categorie" id="goToCategorie" >Action</button>
                     <div class="img-inner-games">
 
                         <div class="contenedor">
@@ -254,7 +353,7 @@
                                     <div class="play-fav">   
     
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <a href="game.html"><img src="./img/play.png" alt="" class="play-contenedor"></a>
+                                            <a href="game.html" class="a-play-contenedor"><img src="./img/play.png" alt="" class="play-contenedor"></a>
                                     </div>               
                                 </div>
                             </figure>
@@ -267,7 +366,7 @@
                                     <div class="play-fav">   
     
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <a href="game.html"><img src="./img/play.png" alt="" class="play-contenedor"></a>
+                                            <a href="game.html" class="a-play-contenedor"><img src="./img/play.png" alt="" class="play-contenedor"></a>
                                     </div>               
                                 </div>
                             </figure>
@@ -280,7 +379,7 @@
                                     <div class="play-fav">   
     
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <a href="game.html"><img src="./img/play.png" alt="" class="play-contenedor"></a>
+                                            <a href="game.html" class="a-play-contenedor"><img src="./img/play.png" alt="" class="play-contenedor"></a>
                                     </div>               
                                 </div>
                             </figure>
@@ -293,7 +392,7 @@
                                     <div class="play-fav">   
     
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <a href="game.html"><img src="./img/play.png" alt="" class="play-contenedor"></a>
+                                            <a href="game.html" class="a-play-contenedor"><img src="./img/play.png" alt="" class="play-contenedor"></a>
                                     </div>               
                                 </div>
                             </figure>
@@ -306,80 +405,7 @@
                                     <div class="play-fav">   
     
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <a href="game.html"><img src="./img/play.png" alt="" class="play-contenedor"></a>
-                                    </div>               
-                                </div>
-                            </figure>
-                        </div>
-                        
-                    </div>
-                </section>
-
-                <section>
-                    <a href="categorie.html" class="name-categorie">Action</a>
-                    <div class="img-inner-games">
-
-                        <div class="contenedor">
-                            <figure>
-                                <img src="img/game1.jpg" alt="">
-                                <div class="capa" id="openGameInfo">
-                                    <h2>Nombre del juego</h2> 
-                                    <div class="play-fav">   
-    
-                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <a href="game.html"><img src="./img/play.png" alt="" class="play-contenedor"></a>
-                                    </div>               
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="contenedor">
-                            <figure>
-                                <img src="img/game1.jpg" alt="">
-                                <div class="capa" id="openGameInfo">
-                                    <h2>Nombre del juego</h2> 
-                                    <div class="play-fav">   
-    
-                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <a href="game.html"><img src="./img/play.png" alt="" class="play-contenedor"></a>
-                                    </div>               
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="contenedor">
-                            <figure>
-                                <img src="img/game1.jpg" alt="">
-                                <div class="capa" id="openGameInfo">
-                                    <h2>Nombre del juego</h2> 
-                                    <div class="play-fav">   
-    
-                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <a href="game.html"><img src="./img/play.png" alt="" class="play-contenedor"></a>
-                                    </div>               
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="contenedor">
-                            <figure>
-                                <img src="img/game1.jpg" alt="">
-                                <div class="capa" id="openGameInfo">
-                                    <h2>Nombre del juego</h2> 
-                                    <div class="play-fav">   
-    
-                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <a href="game.html"><img src="./img/play.png" alt="" class="play-contenedor"></a>
-                                    </div>               
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="contenedor">
-                            <figure>
-                                <img src="img/game1.jpg" alt="">
-                                <div class="capa" id="openGameInfo">
-                                    <h2>Nombre del juego</h2> 
-                                    <div class="play-fav">   
-    
-                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <a href="game.html"><img src="./img/play.png" alt="" class="play-contenedor"></a>
+                                            <a href="game.html" class="a-play-contenedor"><img src="./img/play.png" alt="" class="play-contenedor"></a>
                                     </div>               
                                 </div>
                             </figure>
@@ -391,7 +417,7 @@
                     </div>
                 </section>
                 <section>
-                    <a href="categorie.html" class="name-categorie">Roleplay</a>
+                    <button href="categorie.html" class="name-categorie" id="goToCategorie" >Roleplay</button>
                     <div class="img-inner-games">
 
                         <div class="contenedor">
@@ -445,7 +471,7 @@
                     </div>
                 </section>
                 <section>
-                    <a href="categorie.html" class="name-categorie">Adventure</a>
+                    <button href="categorie.html" class="name-categorie" id="goToCategorie" >Adventure</button>
                     <div class="img-inner-games">
 
                         <div class="contenedor">
@@ -495,7 +521,7 @@
                     </div>
                 </section>
                 <section>
-                    <a href="categorie.html" class="name-categorie">Estrategy</a>
+                    <button href="categorie.html" class="name-categorie" id="goToCategorie" >Estrategy</button>
                     <div class="img-inner-games">
 
                         <div class="contenedor">

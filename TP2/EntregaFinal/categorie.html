@@ -18,127 +18,192 @@
             <img src="./img/acorn.png" 
                 alt="acorn.logue"
                 class="footer-logo">
-                <h1>AcornStudios</h1>
+            <h1>AcornStudios</h1>
         </a>
 
         <button id="openBusqueda" class="header-busqueda">
-            <img src="./img/busqueda.png" alt="acorn.logue" class="footer-logo">
+            <img src="./img/search.png" alt="acorn.logue" class="footer-logo">
         </button>
         
 
         <ul class="header-categories">
-            <li><a href="categorie.html">Action</a></li>
-            <li><a href="categorie.html">Roleplay</a></li>
-            <li><a href="categorie.html">Rpg</a></li>
-            <li><a href="categorie.html">Survival</a></li>
-            <li><a href="categorie.html">Terror</a></li>
+            <li><button href="categorie.html" id="goToCategorie">Action</button></li>
+            <li><button href="categorie.html" id="goToCategorie">Roleplay</button></li>
+            <li><button href="categorie.html" id="goToCategorie">Rpg</button></li>
+            <li><button href="categorie.html" id="goToCategorie">Survival</button></li>
+            <li><button href="categorie.html" id="goToCategorie">Terror</button></li>
             <li>
-                <a href="">Ver mas ˬ </a>
+                <button href="">Ver mas ˬ </button>
                 <ul class="vertical-drop-menu">
-                    <li><a href="categorie.html">Deportivo</a></li>
-                    <li><a href="categorie.html">Estrategia</a></li>
-                    <li><a href="categorie.html">Simulacion</a></li>
-                    <li><a href="categorie.html">Musicales</a></li>
-                    <li><a href="categorie.html">Arcade</a></li>
-                    <li><a href="categorie.html">Terror</a></li>
+                    <li><button href="categorie.html" id="goToCategorie">Deportivo</button></li>
+                    <li><button href="categorie.html" id="goToCategorie">Estrategia</button></li>
+                    <li><button href="categorie.html" id="goToCategorie">Simulacion</button></li>
+                    <li><button href="categorie.html" id="goToCategorie">Musicales</button></li>
+                    <li><button href="categorie.html" id="goToCategorie">Arcade</button></li>
+                    <li><button href="categorie.html" id="goToCategorie">Terror</button></li>
                 </ul>
             </li>
         </ul>
 
-        <div class="header-logo-home" id="showLogin">
+        <div class="header-login-loge" id="showLogin">
             <button class="header-login">login</button>
             <img src="./img/user.png" alt="acorn.logue" class="footer-logo">
         </div>
     </header>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Login -->
+    <!-- Login -->
     
-        <div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay"></div>
     
-        <article class="login" id="login">
-            <div class="close-div">
-                <button class="close" id="closeLogin">X</button>
+    <article class="login" id="login">
+        <div class="close-div">
+            <button class="close" id="closeLogin">X</button>
+        </div>
+        <h1> Login </h1>
+        <form action="">
+            <label for="">Email address</label>
+            <input type="text" class="input-popup" placeholder="Enter your email here">
+
+            <label for="">Password</label>
+            <input type="text" class="input-popup" placeholder="Enter your password here">
+
+            <div>
+                <span><input type="checkbox"> Remember</span>
+                
+                <a href="">i forget my password</a>
             </div>
-            <h1> Login </h1>
-            <form action="">
-                <label for="">Email address</label>
-                <input type="text" class="input-popoup" placeholder="Enter your email here">
-    
-                <label for="">Password</label>
-                <input type="text" class="input-popoup" placeholder="Enter your password here">
-    
-                <div>
-                    <span><input type="checkbox"> Remember</span>
+           
+            <button class="login-button" id="goToUser">Enjoy</button>
+           
+            
+        </form>
+        <div class="dha">
+            <button id="goToRegister">Don't have account</button>
+        </div>
+
+    </article>
+
+
+
+     <!-- Register -->
+    <article class="register" id="register">
+        <div class="close-div">
+            <button class="close" id="closeRegister">X</button>
+        </div>
+        <h1> Register </h1>
+        <form action="">
+            <label for="">Email address</label>
+            <input type="text" class="input-popup" placeholder="Enter your email here">
+
+            <label for="">User name</label>
+            <input type="text" class="input-popup" placeholder="Enter your user name here">
+            <label for="">Password</label>
+            <input type="text" class="input-popup" placeholder="Enter your password here">
+
+            <label for="">Repeat your password</label>
+            <input type="text" class="input-popup" placeholder="Confirm your password here">
+           
+            <button class="register-button" id="goToUser">Create Acount</button>
+           
+            
+        </form>
+        <div class="dha">
+            <button id="goToLogin">Already have account</button>
+        </div>
+    </article>
+
+
+    <!-- Desplegable busqueda -->
+
+    <article id="busqueda" class="busqueda">
+        <div class="close-div">
+            <button class="close" id="closeBusqueda">X</button>
+        </div>
+        <div class="sorter">
+            <div class="filter">
+                <select name="sortby">
+                    <option value="">A-z</option>
+                    <option value="">1-2</option>
+                    <option value="">Population</option>
+                </select>
+            </div>
+            <div class="filter">
+                <select>
+                    <option value="">category</option>
+                    <option value="">etc</option>
+                    <option value="">etc</option>
+                </select>
+            </div>
+            <div class="browser">
+                <input type="text" class="input-browser" placeholder="Search" name="buscador" id="buscador">
+            </div>
+        </div>
+        <div class="view-games" id="viewGamesSearch">
+
+            <div class="view-browser">
+                
+                <a href="">Sugestions</a>
+                
+                <div class="visualization">
+                    <!-- Hacete el grid mati -->
+                    <div class="contenedor cont-browser">
+                        <figure>
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa">
+                                <h2>Nombre del juego</h2>                
+                            </div>
+                        </figure>
+                        
+                        <figure>
+                            <img src="img/game2.jpg" alt="">
+                            <div class="capa">
+                                <h2>Nombre del juego</h2>                
+                            </div>
+                        </figure>
+                        
+                    </div>
+                    <div class="contenedor cont-browser">
+                        <figure>
+                            <img src="img/game2.jpg" alt="">
+                            <div class="capa">
+                                <h2>Nombre del juego</h2>                
+                            </div>
+                        </figure>
+                        <figure>
+                            <img src="img/game3.jpg" alt="">
+                            <div class="capa">
+                                <h2>Nombre del juego</h2>                
+                            </div>
+                        </figure>
+                        
+                    </div>
                     
-                    <a href="">i forget my password</a>
                 </div>
-               
-                <a href="user.html" class="login-button">Enjoy</a>
-               
-                
-            </form>
-            <div class="dha">
-                <button id="goToRegister">Don't have account</button>
+                <a href="">Most played</a>
+                <div class="visualization">
+                    <!-- Hacete el grid mati -->
+                </div>
             </div>
-    
-        </article>
-    
-    
-    
-         <!-- Register -->
-        <article class="register" id="register">
-            <div class="close-div">
-                <button class="close" id="closeRegister">X</button>
+            <div class="scroll">
+
             </div>
-            <h1> Register </h1>
-            <form action="">
-                <label for="">Email address</label>
-                <input type="text" class="input-popoup" placeholder="Enter your email here">
-    
-                <label for="">User name</label>
-                <input type="text" class="input-popoup" placeholder="Enter your user name here">
-                <label for="">Password</label>
-                <input type="text" class="input-popoup" placeholder="Enter your password here">
-    
-                <label for="">Repeat your password</label>
-                <input type="text" class="input-popoup" placeholder="Confirm your password here">
-               
-                <a href="user.html class="register-button">Create Acount</a>
-               
-                
-            </form>
-            <div class="dha">
-                <button id="goToLogin">Already have account</button>
-            </div>
-    
-        </article>
-    
-    
+        </div>
+        
+        <button  class="all-games" id="goToAllGames">All the games</button>
+        
 
 
+    </article>
 
-        <!-- Desplegable busqueda -->
-    
-        <article id="busqueda" class="busqueda">
-            <div class="close-div">
-                <button class="close" id="closeBusqueda">X</button>
-            </div>
-    
-        </article>
+
+    <div class="loading-animation" id="loadingOverlay">
+        <img src="/img/acorn.png" alt="">
+        <p class="loading-text">Loading</p>  
+        <p class="dot1">.</p>
+        <p class="dot2">.</p>
+        <p class="dot3">.</p>
+    </div>
     
 
 
@@ -182,8 +247,8 @@
         <!-- Main component-->
         <article class="cards">
 
-                    <a href="categorie.html" class="name-categorie">Games of this category</a>
-                    <div class="img-inner-games-categories">
+            <button href="categorie.html" class="name-categorie" id="goToCategorie" >Action</button>
+            <div class="img-inner-games-categories">
 
 
 

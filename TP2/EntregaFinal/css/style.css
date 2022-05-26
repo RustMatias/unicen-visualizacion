@@ -130,19 +130,17 @@ header{
 
 }
 
-header a{
+header button{
     text-decoration: none;
+
     color: var(--primary);
     display:flex;
 }
 
-header li{
+header li button{
     width: 120px;
     text-align:center;
-    transition: 1s;
 }
-
-
 
 .header-logo-home{
     display: flex;
@@ -150,6 +148,7 @@ header li{
     align-items: center;
     cursor: pointer;
     width: 300px;  
+    text-decoration: none;
 }
 
 .header-login-loge{
@@ -162,13 +161,18 @@ header li{
 .header-categories{
     display: flex;
     list-style: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-categories li{
     margin: 0px 12px;
 }
 
-.header-categories > li > a{
+.header-categories > li > button{
+    cursor: pointer;
+    background: none;
+    border:none;
     border-bottom: 2px solid var(--primary);
     font-size: 20px;
     display:block;
@@ -195,14 +199,14 @@ header li{
 
 /*VERTICAL DROPDOWN*/
 
-.header-categories > li:hover{
+.header-categories > li:hover > .vertical-drop-menu{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     transition: 1s;
-    
+    z-index: 10;
 } 
 
 .vertical-drop-menu{
@@ -218,7 +222,7 @@ header li{
     
 }
 
-.vertical-drop-menu a{
+.vertical-drop-menu button{
     text-decoration: none;
     margin: 0;
 }
@@ -240,43 +244,8 @@ header li{
 
 
 
-/* antes */
-.header-categories > li:hover > .vertical-drop-menu{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 10;
-} 
 
-.vertical-drop-menu{
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    display: none;
-    list-style: none;
-    width: 100px;
-    background-color: var(--dark);
-    text-align: center;
-}
 
-.vertical-drop-menu a{
-    text-decoration: none;
-    margin: 0;
-}
-
-.vertical-drop-menu li{
-    
-    padding: 5px;
-    margin: 10px;
-    border-bottom: 2px solid var(--primary);
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
 
 
@@ -292,6 +261,12 @@ header li{
     position: fixed;
     visibility: hidden;
     z-index: 6;
+}
+
+.overlay.change-page{
+    display: flex;
+    visibility: visible;
+    z-index: 9;
 }
 
 .overlay.show{
@@ -737,7 +712,15 @@ header li{
     transition: all 300ms ease-out;
     opacity: 0;
     visibility: hidden;
-   
+}
+
+.a-play-contenedor{
+    width: 40px;
+    height: 40px;
+    margin: 0 16px 16px 0;
+    transition: all 500ms ease-out;
+    background: none;
+    border: none;
 }
 
 .contenedor figure:hover > .capa{
@@ -771,6 +754,8 @@ header li{
 }
 
 .name-categorie{
+    background: none;
+    border: none;
     cursor: pointer;
     text-decoration: none;
     font-size: var(--h1);
@@ -1121,6 +1106,105 @@ footer{
 .galery img{
     width: 395px;
     height: 208px;
+}
+
+.loading-animation{
+    position: absolute;
+    z-index:10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--overlay);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--h1);
+    color: var(--light);
+    visibility: hidden;
+}
+
+.loading-animation.show{
+    visibility: visible;
+}
+
+
+.loading-animation img{
+    width: 50px;
+    margin: 0 20px 20px 0;
+    animation: bellota 1.5s linear infinite;
+}
+
+.loading-text{
+    margin-right: 2px;
+}
+
+.dot1{
+    animation: dot1 1.5s linear infinite;
+}
+
+.dot2{
+    animation: dot1 1.5s linear 0.2s infinite;
+}
+
+.dot3{
+    animation: dot1 1.5s linear 0.4s infinite;
+}
+
+@keyframes dot1{
+    0%{}
+    20%{
+        transform: translatey(-5px);
+    }
+    50%{transform: translatey(0px);}
+    100%{}
+}
+
+@keyframes bellota{
+
+    0%{}
+    20%{
+        transform: translatey(-7px);
+    }
+    70%{transform: translatey(0px);}
+    100%{}
+
+
+    /* 0%{
+        
+    }
+    12.5%{
+        transform: translatey(-15px) translatex(-5px);
+    }
+
+    25%{
+        transform: translatey(-20px) translatex(-20px);
+    }
+
+    37.5%{
+        transform: translatey(-15px) translatex(-35px);
+    }
+
+    50%{
+        transform: translatey(0px) translatex(-40px);
+    }
+
+    62.5%{
+        transform: translatey(15px) translatex(-35px);
+    }
+
+    75%{
+        transform: translatey(20px) translatex(-20px);
+    }
+
+    87.5%{
+        transform: translatey(15px) translatex(-5px);
+    }
+
+    100%{
+        
+    } */
 }
 
 /* 
