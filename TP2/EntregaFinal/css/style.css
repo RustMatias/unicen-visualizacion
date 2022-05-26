@@ -42,6 +42,7 @@
     --underlined: 18px;
     --underlinedS: 12px;
     --text: 20px;
+    --info: 14px;
 
 
     /* shadows */
@@ -114,6 +115,8 @@ h3{
 
 /* --------------------------------------Header---------------*/
 
+
+/*  */
 header{
     display: flex;
     height: 56px;
@@ -126,8 +129,6 @@ header{
     position: sticky;
     top: 0px;
     z-index: 5;
-    overflow: hidden;
-
 }
 
 header button{
@@ -143,6 +144,8 @@ header li button{
 }
 
 .header-logo-home{
+    background: none;
+    border: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -177,6 +180,8 @@ header li button{
     font-size: 20px;
     display:block;
 }
+
+
 
 .header-login{
     font-size: 26px;
@@ -222,9 +227,15 @@ header li button{
     
 }
 
-.vertical-drop-menu button{
+.vertical-drop-menu >li > button{
     text-decoration: none;
     margin: 0;
+    background: none;
+    border : none;
+    cursor: pointer;
+    display: flex ;
+    justify-content: center;
+    font-size: 20px;
 }
 
 .vertical-drop-menu li{
@@ -281,7 +292,7 @@ header li button{
     flex-direction:  column;
     width: 860px ;
     height: 455px ; 
-    background-image: url(../img/background.png);
+    background-image: url(../img/background.gif);
     background-position: center top;
     position: absolute;
     top: 50%;
@@ -293,6 +304,7 @@ header li button{
     visibility: hidden;
     overflow: hidden;
 }
+
 
 .login.show{
     display: flex;
@@ -436,7 +448,7 @@ header li button{
     cursor: pointer;
 }
 
-.dha{
+.underline{
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -449,7 +461,7 @@ header li button{
     padding-bottom: 24px;
 }
 
-.dha > button{
+.underline > button{
     background: none;
     border: none;
     font-size: var(--underlined);
@@ -473,7 +485,7 @@ header li button{
     flex-direction:  column;
     width: 860px ;
     height: 600px ; 
-    background-image: url(../img/background.png);
+    background-image: url(../img/background.gif);
     background-position: center top;
     position: absolute;
     top: 50%;
@@ -514,12 +526,28 @@ header li button{
 .register-button{
     margin: 0 auto;
     margin-top: 32px;
-    width: 110px;
+    width: auto;
+    padding: 0 20px;
     height: 50px;
     background-color: var(--accent);
     border: none;
     font-size: 26px;
     cursor: pointer;
+    color: var(--light);
+}
+
+.login-button{
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 110px;
+    height: 50px;
+    background-color: var(--agree);
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .close-div{
@@ -530,7 +558,7 @@ header li button{
     background: none;
 }
 
-.dha{
+.underline{
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -541,6 +569,11 @@ header li button{
     text-decoration: underline;
     padding-right: 40px;
     padding-bottom: 24px;
+    font-weight: 500;
+}
+
+.dha button{
+    font-weight: 500;
 }
 
 /* --------------------------------------Busqueda---------------*/
@@ -589,13 +622,28 @@ header li button{
     font-size: var(--text);
 }
 
-.filter > a{
+.filter > select{
+    border: none;
+    background: none;
     display:block;
     border-bottom: 2px solid var(--primary);
     font-size: 20px;
     text-decoration: none;
     color: var(--primary);
 }
+
+
+.filter > select > option{
+    border: none;
+    background-color: none;
+    background: none;
+    display:block;
+    border-bottom: 2px solid var(--primary);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--dark);
+}
+
 
 .view-games{
     display: flex;
@@ -630,12 +678,15 @@ header li button{
 }
 
 .all-games{
+    cursor: pointer;
+    border: none;
     display: flex;
     justify-content: flex-end;
     color: var(--primary);
     font-size: var(--underlined);
     float: right;
     margin-right: 32px;
+    background:none;
 }
 
 /* --------------------------------------Main---------------*/
@@ -647,6 +698,7 @@ header li button{
     justify-content: center;
     align-items: center;
     height: 100%;
+    cursor: pointer;
 }
 
 .contenedor figure{
@@ -674,8 +726,13 @@ header li button{
     opacity: 0;
     visibility: hidden;
     border: none;
-   
 }
+
+.contenedor figure .capa h2{
+    width: 149px;
+
+}
+
 
 .contenedor figure .fav-contenedor{
     width: 36px;
@@ -703,17 +760,6 @@ header li button{
     size: 0;
 }
 
-.contenedor figure .capa{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--overGame);
-    transition: all 300ms ease-out;
-    opacity: 0;
-    visibility: hidden;
-}
-
 .a-play-contenedor{
     width: 40px;
     height: 40px;
@@ -721,6 +767,7 @@ header li button{
     transition: all 500ms ease-out;
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .contenedor figure:hover > .capa{
@@ -798,9 +845,25 @@ aside{
     margin: 2rem;
     margin-bottom: 10px;
     padding: 2rem;
-    height: 20rem;
+    padding-top: 20px;
+    
     border-radius: 5px;
     background-color: var(--secondary75pc);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.info-aside h1{
+    font-size: 26px;
+    color: var(--light);
+
+}
+
+.info-aside p{
+    font-size: 20px;
+    color: var(--primaryL2);  
 }
 
 .flex{
@@ -839,6 +902,7 @@ footer{
 
 .footer-links li{
     list-style: none;
+    cursor: pointer;
 }
 
 .footer-logo{
@@ -877,6 +941,11 @@ footer{
     color: var(--primaryL2);
 }
 
+.footer-item-search-colum{
+    columns: 2;
+    color: var(--primaryL2);
+}
+
 /* ------------------------------------ */
 
 .pagination{
@@ -894,6 +963,7 @@ footer{
     border-radius: 50%;
     background-color: var(--secondary);
     color: var(--light);
+    cursor: pointer;
 }
 
 
@@ -1030,7 +1100,7 @@ footer{
 }
 
 .info-aside-publi img{
-    height: 471px;
+    height: 350px;
     width: 100%;
 }
 
@@ -1045,7 +1115,7 @@ footer{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -200%);
+    transform: translate(-50%, -50%);
     width: 1217px;
     height: 95vh;
     background-image: url(../img/background.png);
@@ -1054,59 +1124,134 @@ footer{
     flex-direction: column;
     justify-content: flex-start;
     z-index: 7;
+    transition: 0.5s;
 }
+
+
 
 .container-up-game-info{
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+
     justify-content: space-evenly;
     width: min-content;
+    margin: 40px 32px 32px 32px;
+}
+
+.container-up-game-info h1{
+    font-size: var(--h1);
+    margin: 0 0 0 10px;
+}
+
+.container-up-game-info h2{
+    font-size: var(--h2);
+    margin: 10px 8px 8px 8px;
+}
+
+.container-up-game-info p{
+    font-size: var(--info);
+    margin: 10px;
 }
 
 .grande-up{
     display: flex;
-    margin-left: 32px ;
+    align-items: flex-end;
+    
 }
 
 .nombre-del-juego-popup{
-    width: 100%;
-    height: 116px;
-    margin-bottom: 24px;
-    background-color: var(--overlaySecondary);
+    display: flex;
+    flex-direction: column;
+    width: 556px;
+    height: 158px;
+    justify-content: space-between;
 }
 
-
-.lets-play{
-    height: 255px;
-    width: 255px;
-    border: 50%;
+.fondo-nombre-del-juego{
+    background-color: var(--overlaySecondary);
+    border-radius: 6px;
+    margin: 0;    
 }
 
 .flex-popup-info-games{
     display: flex;
 }
 
-.flex-popup-info-games div{
+.dual-flex-popup-info-games{
     height: 245px;
     width: 266px;
     background-color: var(--overlaySecondary);
+    margin: 24px 24px 0 0;
+    border-radius: 6px;
 }
 
-.controls-info-games{
-    margin-left: 24px;
+
+.dual-flex-popup-info-games img{
+    height: 142px;
+    width: 95px;
+}
+
+.keys-info-games{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .links-info-games{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 161px;
+    height: 369px;
     background-color: var(--overlaySecondary);
-    margin-left: 24px;
+    border-radius: 6px;
 }
+
+.links-info-games div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.links-info-games img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+}
+
+.lets-play{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    height: 380px;
+    background: none;
+    border: none;
+}
+
+.lets-play img{
+    height: 255px;
+    width: 255px;
+    
+    
+}
+
 
 .galery img{
     width: 395px;
     height: 208px;
 }
+
+/*----------*/
 
 .loading-animation{
     position: absolute;
@@ -1133,7 +1278,7 @@ footer{
 .loading-animation img{
     width: 50px;
     margin: 0 20px 20px 0;
-    animation: bellota 1.5s linear infinite;
+    animation: bellota 0.75s infinite;
 }
 
 .loading-text{
@@ -1163,11 +1308,12 @@ footer{
 
 @keyframes bellota{
 
-    0%{}
-    20%{
-        transform: translatey(-7px);
+    0%{
     }
-    70%{transform: translatey(0px);}
+    70%{transform: translatey(-10px);}
+    80%{transform: translatey(-4px);
+
+    }
     100%{}
 
 

@@ -26,27 +26,26 @@
         </button>
         
 
+
         <ul class="header-categories">
-            <li><button href="categorie.html" id="goToCategorie">Action</button></li>
-            <li><button href="categorie.html" id="goToCategorie">Roleplay</button></li>
-            <li><button href="categorie.html" id="goToCategorie">Rpg</button></li>
-            <li><button href="categorie.html" id="goToCategorie">Survival</button></li>
-            <li><button href="categorie.html" id="goToCategorie">Terror</button></li>
+            <li><button href="categorie.html" id="goToCategorie1">Action</button></li>
+            <li><button href="categorie.html" id="goToCategorie2">Roleplay</button></li>
+            <li><button href="categorie.html" id="goToCategorie3">Rpg</button></li>
+            <li><button href="categorie.html" id="goToCategorie4">Survival</button></li>
+            <li><button href="categorie.html" id="goToCategorie5">Terror</button></li>
             <li>
                 <button href="">Ver mas ˬ </button>
                 <ul class="vertical-drop-menu">
-                    <li><button href="categorie.html" id="goToCategorie">Deportivo</button></li>
-                    <li><button href="categorie.html" id="goToCategorie">Estrategia</button></li>
-                    <li><button href="categorie.html" id="goToCategorie">Simulacion</button></li>
-                    <li><button href="categorie.html" id="goToCategorie">Musicales</button></li>
-                    <li><button href="categorie.html" id="goToCategorie">Arcade</button></li>
-                    <li><button href="categorie.html" id="goToCategorie">Terror</button></li>
+                    <li><button href="categorie.html" id="goToCategorie6">Deportivo</button></li>
+                    <li><button href="categorie.html" id="goToCategorie7">Estrategia</button></li>
+                    <li><button href="categorie.html" id="goToCategorie8">Simulacion</button></li>
+                    <li><button href="categorie.html" id="goToCategorie9">Musicales</button></li>
                 </ul>
             </li>
         </ul>
 
         <div class="header-login-loge" id="showLogin">
-            <button class="header-login" id="goToFavorite">Favorites</button>
+            <button class="header-login" onclick="loadingFavorites()">Favorites</button>
             <img src="./img/user.png" alt="acorn.logue" class="footer-logo">
         </div>
     </header>
@@ -297,13 +296,12 @@
 
 
     <footer>
-
         <!--LINKS-->
         <article class="footer-inner-component">
             <section class="footer-links">
                 <h2>About Us</h2>
                 <ul class="footer-item-search">
-                    <li> Home </li>
+                    <li onclick="loadingHome()"> Home </li>
                     <li> Acount </li>
                     <li> Privacy and Security </li>
                 </ul>
@@ -311,11 +309,15 @@
     
             <section class="footer-links">
                 <h2>Catalog</h2>
-                <ul class="footer-item-search">
-                    <li> Acction </li>
-                    <li> Survival </li>
-                    <li> RPG </li>
-                    <li> Terror </li>
+                <ul class="footer-item-search-colum">
+                    <li onclick="loadingCat()"> Acction </li>
+                    <li onclick="loadingCat()"> Survival </li>
+                    <li onclick="loadingCat()"> RPG </li>
+                    <li onclick="loadingCat()"> Terror </li>
+                    <li onclick="loadingCat()"> Aventura </li>
+                    <li onclick="loadingCat()"> Arcade </li>
+                    <li onclick="loadingCat()"> MMO </li>
+                    <li onclick="loadingCat()"> Estrategy</li>
                 </ul>
             </section>
     
@@ -334,24 +336,23 @@
         <article class="footer-social-component">
     
             <div class="social-media">
-                <a href=""><img src="./img/instagram-icon.png" alt="instagram-icon"></a>
-                <a href=""><img src="./img/facebook-icon.png" alt="facebook-icon"></a>
-                <a href=""><img src=".img/twitter-icon.png" alt="twitter-icon"></a>
+                <a href="https://instagram.com"><img src="./img/instagram.png" alt="instagram-icon"></a>
+                <a href="https://facebook.com"><img src="./img/facebook.png" alt="facebook-icon"></a>
+                <a href="https://twitter.com"><img src="./img/twitter.png" alt="twitter-icon"></a>
             </div>
     
-            <h1>
+            <button href="index.html" class="header-logo-home"  onclick="loadingHome()">
                 <img src="./img/acorn.png" 
                     alt="acorn.logue"
                     class="footer-logo">
-                    AcornStudios
-            </h1>
+                <h1>AcornStudios</h1>
+            </button>
     
             <p>2022 Acornstudios | All Rights Reserved</p>
     
         </article>
     
     </footer>
-
     <script src="/js/interactions.js"></script>
 </body>
 </html>

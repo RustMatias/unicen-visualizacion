@@ -33,11 +33,22 @@ if(  document.querySelector("#overlay") != null){
     
         loginoverlay.classList.toggle("show");
         overlay.classList.toggle("show");
-        
+
+        if(loginoverlay.classList != "login"){
+            loginoverlay.classList.toggle("show");
+        }
+
+
         if(registeroverlay.classList != "register"){
             registeroverlay.classList.toggle("show");
         }
-    
+
+        if(document.querySelector("#gameInfoPopup") != null &&
+        document.querySelector("#gameInfoPopup").classList != "game-info-popup"){
+            document.querySelector("#gameInfoPopup").classList.toggle("show");
+        }
+
+        
     })
 }
 
@@ -80,45 +91,34 @@ if(document.querySelector("#goToLogin") !=null){
 
 
 
-//busqueda
-if( document.querySelector("#openBusqueda") != null){
-    document.querySelector("#openBusqueda").addEventListener( "click", ()=>{
-
-        //agarra del dom
-        let busqueda = document.querySelector("#busqueda");
-    
-        //agrega la clase
-        busqueda.classList.toggle("show");
-    
-    })  
+function openBusqueda(){
+    //agarra del dom
+    let busqueda = document.querySelector("#busqueda");
+        
+    //agrega la clase
+    busqueda.classList.toggle("show");
 }
 
 
-if(document.querySelector("#closeBusqueda") != null){
-    document.querySelector("#closeBusqueda").addEventListener( "click", ()=>{
-
-        //agarra del dom
-        let busqueda = document.querySelector("#busqueda");
-    
-        //agrega la clase
-        busqueda.classList.toggle("show");
-    
-    })  
-}
 
 
-if(document.querySelector("#gameInfoPopup") != null){
-    document.querySelector("#openGameInfo").addEventListener( "click", ()=>{
 
-        console.log(gameInfo);
+
+function openGameInfo(){
+
+
         //agarra del dom
         let gameInfo = document.querySelector("#gameInfoPopup");
         console.log(gameInfo);
         //agrega la clase
         gameInfo.classList.toggle("show");
+        
+        let overlay = document.querySelector("#overlay");
+        overlay.classList.toggle("show");
+
     
-    }) 
 }
+
 
 
 if(document.querySelector("#viewGamesSearch") != null){
@@ -137,7 +137,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                     <figure>
                                     <img src="img/game1.jpg" alt="">
                                     <div class="capa" id="openGameInfo">
-                                        <h2>Nombre del juego</h2> 
+                                        <h2>`+ value +" y la cueva olvidada" +`</h2> 
                                         <div class="play-fav">   
         
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
@@ -149,7 +149,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                 <figure>
                                 <img src="img/game1.jpg" alt="">
                                 <div class="capa" id="openGameInfo">
-                                    <h2>Nombre del juego</h2> 
+                                <h2>`+ value +" del caribe" +`</h2> 
                                     <div class="play-fav">   
     
                                         <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
@@ -163,7 +163,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                     <figure>
                                     <img src="img/game2.jpg" alt="">
                                     <div class="capa" id="openGameInfo">
-                                        <h2>Nombre del juego</h2> 
+                                    <h2>`+ value +" y furioso" +`</h2> 
                                         <div class="play-fav">   
         
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
@@ -174,7 +174,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                 <figure>
                                 <img src="img/game3.jpg" alt="">
                                 <div class="capa" id="openGameInfo">
-                                    <h2>Nombre del juego</h2> 
+                                <h2>`+ "el laberito de "+ value  +`</h2> 
                                     <div class="play-fav">   
     
                                         <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
@@ -188,7 +188,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                     <figure>
                                     <img src="img/game1.jpg" alt="">
                                     <div class="capa" id="openGameInfo">
-                                        <h2>Nombre del juego</h2> 
+                                    <h2>`+ "la venganza de "+ value  +`</h2> 
                                         <div class="play-fav">   
         
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
@@ -199,7 +199,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                 <figure>
                                 <img src="img/game2.jpg" alt="">
                                 <div class="capa" id="openGameInfo">
-                                    <h2>Nombre del juego</h2> 
+                                <h2>`+ "Counter-Strike: "+ value + " Offensive " +`</h2> 
                                     <div class="play-fav">   
     
                                         <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
@@ -214,89 +214,103 @@ if(document.querySelector("#viewGamesSearch") != null){
     }) 
 }
 
-if(document.querySelector("#goToGamePage") != null){
-//redireccionando botones de overlay hacia games con loading
-    document.querySelector("#goToGamePage").addEventListener( "click", ()=>{
-
-        let loading = document.querySelector("#loadingOverlay");
-        loading.classList.toggle("show");
-        
-        function loading1(){
-            location.href="game.html";
-        }
-        
-        setTimeout(loading1, 3000);
-
-    }) 
+function loadingGamePage(){
+    window.scrollTo(0,0);
+    let loading = document.querySelector("#loadingOverlay");
+    loading.classList.toggle("show");
+    
+    function loading1(){
+        location.href="game.html";
+    }
+    
+    setTimeout(loading1, 3000);
 }
 
-if(document.querySelector("#goToAllGames") != null){
-    //redireccionando botones de allGames hacia allgames.page con loading
-    document.querySelector("#goToAllGames").addEventListener( "click", ()=>{
 
-        let loading = document.querySelector("#loadingOverlay");
-        loading.classList.toggle("show");
-        
-        function loading2(){
-            location.href="allgames.html";
-        }
-        
-        setTimeout(loading2, 3000);
 
-    }) 
+function loadingAllGames(){
+    window.scrollTo(0,0);
+    let loading = document.querySelector("#loadingOverlay");
+    loading.classList.toggle("show");
+    
+    function loading3(){
+        location.href="allgames.html";
+    }
+    
+    setTimeout(loading3, 3000);
 }
 
-if(document.querySelector("#goToCategorie") != null){
-    //redireccionando botones de Categories hacia categories.page con loading
-    document.querySelector("#goToCategorie").addEventListener( "click", (event)=>{
-        event.preventDefault();
 
+
+
+
+
+
+function loadingCat(){
+    window.scrollTo(0,0);
+    let loading = document.querySelector("#loadingOverlay");
+    loading.classList.toggle("show");
+    
+    function loading3(){
+        location.href="categorie.html";
+    }
+    
+    setTimeout(loading3, 3000);
+}
+
+
+
+
+
+
+
+function loadingHome(){
+    window.scrollTo(0,0);
+    let loading = document.querySelector("#loadingOverlay");
+    loading.classList.toggle("show");
+    
+    function loading3(){
+        location.href="index.html";
+    }
+    
+    setTimeout(loading3, 3000);
+}
+
+
+function loadingFavorites(){
+    window.scrollTo(0,0);
+    let loading = document.querySelector("#loadingOverlay");
+    loading.classList.toggle("show");
+    
+    function loading4(){
+        location.href="favorite.html";
+    }
+      
+    setTimeout(loading4, 3000);
+}
+
+
+function loadingUser(event){
+    window.scrollTo(0,0);
+    event.preventDefault();
         let loading = document.querySelector("#loadingOverlay");
         loading.classList.toggle("show");
         
         function loading3(){
-            location.href="categorie.html";
+            location.href="user.html";
         }
         
         setTimeout(loading3, 3000);
-
-    }) 
-
-}
-
-if(document.querySelector("#goToFavorite")!= null){
-    document.querySelector("#goToFavorite").addEventListener( "click", (event)=>{
-        event.preventDefault();
-    
-        let loading = document.querySelector("#loadingOverlay");
-        loading.classList.toggle("show");
-        
-        function loading4(){
-            location.href="favorite.html";
-        }
-          
-        setTimeout(loading4, 3000);
-    
-    }) 
 }
 
 
 
 
-if(document.querySelector("#goToUser")!= null){
-    document.querySelector("#goToUser").addEventListener( "click", (event)=>{
-        event.preventDefault();
-    
-        let loading = document.querySelector("#loadingOverlay");
-        loading.classList.toggle("show");
-        
-        function loading5(){
-            location.href="user.html";
-        }
-          
-        setTimeout(loading5, 3000);
-    
-    }) 
-}
+
+
+
+
+
+
 
 
