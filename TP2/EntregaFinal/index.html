@@ -56,7 +56,7 @@
     
     <article class="login" id="login">
         <div class="close-div">
-            <button class="close" id="closeLogin">X</button>
+            <button class="close" id="closeLogin"><img src="/img/close.png" alt=""></button>
         </div>
         <h1> Login </h1>
         <form action="">
@@ -89,7 +89,7 @@
      <!-- Register -->
     <article class="register" id="register">
         <div class="close-div">
-            <button class="close" id="closeRegister">X</button>
+            <button class="close" id="closeRegister"><img src="/img/close.png" alt=""></button>
         </div>
         <h1> Register </h1>
         <form action="">
@@ -118,23 +118,24 @@
 
     <article id="busqueda" class="busqueda">
         <div class="close-div">
-            <button class="close" onclick="openBusqueda()">X</button>
+            <button class="close" onclick="openBusqueda()"><img src="/img/close.png" alt=""></button>
         </div>
         <div class="sorter">
             <div class="filter">
                 <select >
-                    <option value="">No sort</option>
-                    <option value="">A-Z</option>
-                    <option value="">Z-A</option>
-                    <option value="">Recents</option>
-                    <option value="">Populars</option>
+                    <option value="">Filter</option>
+                    <option value="">Category</option>
+                    <option value="">Games</option>
                 </select>
             </div>
             <div class="filter">
                 <select>
-                    <option value="">No filter</option>
-                    <option value="">Category</option>
-                    <option value="">Games</option>
+                    
+                    <option value="">Sort</option>
+                    <option value="">A-Z</option>
+                    <option value="">Z-A</option>
+                    <option value="">Recents</option>
+                    <option value="">Populars</option>
                 </select>
             </div>
             <div class="browser">
@@ -148,8 +149,8 @@
                 <a href="">Sugestions</a>
                 
                 <div class="visualization">
-                    <!-- Hacete el grid mati -->
-                    <div class="contenedor cont-browser"><
+                    
+                    <div class="contenedor cont-browser">
                         <figure>
                             <img src="img/game1.jpg" alt="">
                             <div class="capa" id="openGameInfo" onclick="openGameInfo()">
@@ -162,6 +163,17 @@
                             </div>
                         </figure>
                         
+                        <figure>
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>Nombre del juego</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
                         <figure>
                             <img src="img/game1.jpg" alt="">
                             <div class="capa" id="openGameInfo" onclick="openGameInfo()">
@@ -198,18 +210,24 @@
                                 </div>               
                             </div>
                         </figure>
+                        <figure>
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>Nombre del juego</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
                         
                     </div>
                     
                 </div>
-                <a href="">Most played</a>
-                <div class="visualization">
-                    <!-- Hacete el grid mati -->
-                </div>
+                
             </div>
-            <div class="scroll">
-
-            </div>
+            
         </div>
         
         <button  class="all-games" onclick="loadingAllGames()">All the games</button>
@@ -1102,6 +1120,6 @@
     
     </footer>
 
-    <script src="/js/interactions.js"></script>
+    <script src="js/interactions.js"></script>
 </body>
 </html>

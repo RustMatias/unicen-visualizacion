@@ -21,11 +21,19 @@
             <h1>AcornStudios</h1>
         </a>
 
-        <button id="openBusqueda" class="header-busqueda">
+        <button onclick="openBusqueda()" class="header-busqueda">
             <img src="./img/search.png" alt="acorn.logue" class="footer-logo">
         </button>
-        
 
+        <button onclick="openBusqueda()" class="burguer header-busqueda">
+            <img src="./img/burger.png" alt="acorn.logue" class="footer-logo">
+        </button>
+        
+        <button href="index.html" class="logo-responsive header-busqueda" onclick="loadingHome()">
+            <img src="./img/acorn.png" 
+                alt="acorn.logue"
+                class="footer-logo">
+        </button>
 
         <ul class="header-categories">
             <li><button onclick="loadingCat()">Action</button></li>
@@ -142,37 +150,38 @@
     </div>
     
 
-    <div class="profile">
+    <div class="profile flex">
 
         <div class="info-profile">
             <img src="./img/user.png" alt="user">
             <div class="info-profile-items">
                 <div>
-                    <p class="profile-item-title">User name: </p>
+                    <p class="profile-item-title">User name:</p>
                     <p class="profile-item-value">Pepe veraz</p>
                 </div>
                 <div>
-                    <p class="profile-item-title">E-amil: </p>
+                    <p class="profile-item-title">E-mail:</p>
                     <p class="profile-item-value">pepe-veraz@gmail.com</p>
                 </div>
                 <div>
-                    <p class="profile-item-title">Age: </p>
-                    <p class="profile-item-value"> 35</p>
+                    <p class="profile-item-title">Age:</p>
+                    <p class="profile-item-value">35</p>
                 </div>
                 <div>
-                    <p class="profile-item-title">Biogaphy: </p>
+                    <p class="profile-item-title">Biogaphy:</p>
                     <p class="profile-item-value">un presentador de noticias. Es bastante vanidoso, pero es enano, gracias a la radiación nuclear de un celular gigante. Su doblaje original se lo da Jim Ward, en Hispanoamérica la voz se la daba Yamin Benarroch, quien lo dobló entre las temporadas 1 y 4. </p>
                 </div>
             </div>
         </div>
 
+        <button onclick="loadingHome()" class="logout-button" >Log out</button>
 
 
 
         <article class="cards">
 
             <section>
-                <button href="categorie.html" class="name-categorie" id="goToFavorite" >Favorites</button>
+                <button href="categorie.html" class="name-categorie" onclick="loadingFavorites()" >Favorites</button>
                 <div class="img-inner-games">
                     <div class="Carousel">
                         <div class="slick-list" id="slick-list">
@@ -323,7 +332,7 @@
             </section>
 
             <section>
-                <button href="categorie.html" class="name-categorie" id="goToCategorie" >Suggested games</button>
+                <button href="categorie.html" class="name-categorie" onclick="loadingCat()" >Suggested games</button>
 
                 <div class="img-inner-games">
                     <div class="Carousel">
