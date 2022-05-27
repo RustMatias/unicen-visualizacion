@@ -82,7 +82,6 @@
 
 html{
     font-family: 'Jost', sans-serif;
-
 }
 
 *{
@@ -918,6 +917,8 @@ header li button{
     width: 1150px;
     padding: 0 10px;
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-inner-games-categories{
@@ -1236,6 +1237,7 @@ font-size: 22px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     z-index: 7;
     transition: 0.5s;
 }
@@ -1360,9 +1362,20 @@ font-size: 22px;
 
 /* carousel */
 
-.Carousel{
-    width: 100%;
+.carousel{
+    
     margin: 0px;
+}
+
+.container-bot-game-info{
+
+    display: flex;
+    height: 190px;
+    width: 95%;
+    margin: 0 32px 32px 32px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 /* images */
@@ -1371,7 +1384,7 @@ font-size: 22px;
     position: relative;
     display: flex;
     align-items: center;
-    width: 1000px;
+    width: 1100px;
     height: 100%;
     max-width: 80vw;
     overflow: hidden;
@@ -1381,7 +1394,7 @@ font-size: 22px;
     position: relative;
     display: flex;
     align-items: center;
-    width: 1100px;
+    width: 1150px;
     height: 100%;
     max-width: 80vw;
     overflow: hidden;
@@ -1762,14 +1775,12 @@ div h2, div h3{
 
     }
     
-
     .header-categorie{
         display:flex;
         flex-direction: column;
         align-items: center;
 
     }
-
 
     .info-profile{
         padding: 0px 8px;
@@ -1808,9 +1819,7 @@ div h2, div h3{
         align-items: center;
         justify-content: center;
     }
-
     
-
     .info-profile img {
         width: 80px;
         height: 80px;
@@ -1825,18 +1834,21 @@ div h2, div h3{
         width: 100%;
     }
 
+    .carousel{
+        width: fit-content;
+
+    }
+
     .slick-list {
         position: relative;
         display: flex;
         align-items: center;
-        width: 100%;
+        width: 360px;
         height: 100%;
         max-width: 90vw;
         overflow: hidden;
-
     }
-
-
+    
     .busqueda{
         display: flex;
         flex-direction: column;
@@ -1865,4 +1877,21 @@ div h2, div h3{
         width: 100%;
     }
     
+    .footer-inner-component{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .footer-links{
+        margin-top:12px;
+        display: flex;
+        
+    }
+
+    .footer-item-search-colum{
+        align-items: center;
+        justify-content: center;
+    }   
+
+
  }
