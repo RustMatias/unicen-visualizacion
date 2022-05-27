@@ -88,6 +88,7 @@ html{
 *{
     padding: 0px;
     margin: 0px;
+    
     font-family: Jost;
     box-sizing: border-box;
     color: var(---dark)
@@ -96,6 +97,8 @@ html{
 body{
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100%;
     background-color: var(--primaryL2);
     background-position: center top;
     /* overflow-x: hidden; */
@@ -126,7 +129,7 @@ header{
     justify-content: space-between;
     align-items: center;
     color: var(--primary);
-    position: sticky;
+    position: fixed;
     top: 0px;
     z-index: 5;
 }
@@ -266,8 +269,8 @@ header li button{
 .overlay{
     display: none;
     background-color: var(--overlay);
-    position: absolute;
-    height: 110vh;
+
+    height: 100vh;
     width: 100%;
     position: fixed;
     visibility: hidden;
@@ -283,6 +286,8 @@ header li button{
 .overlay.show{
     display: flex;
     visibility: visible;
+    position: fixed;
+    height: 10000px;
     z-index: 6;
 }
 
@@ -787,6 +792,83 @@ header li button{
     font-size: var(--h3);
 }
 
+/*  */
+
+.slick{
+    margin: 4px;
+    width: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.slick figure{
+    position: relative;
+    height: 150px;
+    width: 220px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.slick figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.slick figure .fav-contenedor{
+    width: 36px;
+    height: 60px;
+    margin-right: 18px;
+    transition: all 500ms ease-out;
+}
+
+.slick figure .play-contenedor{
+    width: 40px;
+    height: 40px;
+    margin: 0 16px 16px 0;
+    transition: all 500ms ease-out;
+}
+
+.slick figure .capa{
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overGame);
+    transition: all 300ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    border: none;
+}
+
+.slick figure .capa h2{
+    width: 149px;
+
+}
+
+.slick figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+.slick figure:hover > .capa h2{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.slick figure .capa h2{
+    color: var(--light);
+    margin-left: 15px;
+    transition: all 300ms ease-out;
+    font-size: var(--h3);
+}
+
+/*  */
+
 .cards{
     display: flex;
     align-items: flex-start;
@@ -814,6 +896,7 @@ header li button{
     background-color: var(--secondary50pc);
     display: flex;
     height: 190px;
+    width: 1150px;
     padding: 0 10px;
     border-radius: 10px;
 }
@@ -869,6 +952,7 @@ aside{
 .flex{
     display: flex;
     margin: 0 auto;
+    margin-top: 56px;
     width: 100%;
     justify-content: space-between;
 }
@@ -1245,6 +1329,113 @@ footer{
     
 }
 
+/* carousel */
+
+.Carousel{
+    width: 100%;
+    margin: 0px 60px;
+}
+
+/* images */
+
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    height: 100%;
+    max-width: 80vw;
+    overflow: hidden;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+
+.slick h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: #fff;
+    padding: 15px;
+}
+.slick h4 small{
+    font-size: 15px;
+    display: block;
+}
+
+.slick a img{
+    height: 150px;
+    width: 220px;
+    transition: .3s ease-in-out;
+}
+
+
+/* buttons */
+
+.slick-arrow{
+    border-radius: 3px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 24px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+    transition: .3s;
+}
+.slick-arrow:focus{
+    outline: 0;
+}
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: var(--overlay);
+    transition: .3s;
+}
+.slick-prev{
+    left: 20px;
+    background: var(--light);
+}
+
+.slick-prev:hover {
+    width: 32px;
+    height: 64px;
+    background: var(--accent);
+}
+
+.slick-prev:hover svg{
+    width: 16px;
+    color: var(--light);
+    
+}
+
+.slick-next{
+    right: 16px;
+    background: var(--light);
+}
+
+.slick-next:hover {
+    width: 32px;
+    height: 64px;
+    background: var(--accent);
+
+}
+
+.slick-next:hover svg{
+    width: 16px;
+    color: var(--light);
+    
+}
+
+/* -- */
 
 .galery img{
     width: 395px;
@@ -1277,15 +1468,60 @@ footer{
 
 .loading-animation img{
     width: 50px;
-    margin: 0 20px 20px 0;
-    animation: bellota 0.75s infinite;
+    margin: 0 25px 20px 0;
+    animation: bellota 1s infinite;
 }
 
 .loading-text{
     margin-right: 2px;
 }
 
+/* ---------------------------------- */
+
+.l{
+    animation: dot1 1s linear  infinite;
+}
+
+.o{
+    animation: dot1 1s linear 0.1s infinite;
+}
+
+.a{
+    animation: dot1 1s linear 0.2s infinite;
+}
+
+.d{
+    animation: dot1 1s linear 0.3s infinite;
+}
+
+.i{
+    animation: dot1 1s linear 0.4s infinite;
+}
+
+.n{
+    animation: dot1 1s linear 0.5s infinite;
+}
+
+.g{
+    animation: dot1 1s linear 0.6s infinite;
+}
+
 .dot1{
+    animation: dot1 1s linear 0.7s infinite;
+}
+
+.dot2{
+    animation: dot1 1s linear 0.8s infinite;
+}
+
+.dot3{
+    animation: dot1 1s linear 0.9s infinite;
+}
+
+
+/* ----------------- */
+
+/* .dot1{
     animation: dot1 1.5s linear infinite;
 }
 
@@ -1295,26 +1531,22 @@ footer{
 
 .dot3{
     animation: dot1 1.5s linear 0.4s infinite;
-}
+} */
 
 @keyframes dot1{
     0%{}
-    20%{
+    10%{
         transform: translatey(-5px);
     }
-    50%{transform: translatey(0px);}
+    40%{transform: translatey(0px);}
     100%{}
 }
 
 @keyframes bellota{
 
-    0%{
-    }
-    70%{transform: translatey(-10px);}
-    80%{transform: translatey(-4px);
-
-    }
-    100%{}
+    0%   {transform:translatey(5px) scale3d(1.3,.8,1);}
+  40%  {transform: translatey(-30px) scale3d(.9,1.2,1);}
+  100% {transform: translatey(5px) scale3d(1.3,.8,1);}
 
 
     /* 0%{
