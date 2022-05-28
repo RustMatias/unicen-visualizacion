@@ -226,21 +226,18 @@ function like(){
     function loading1(){
         like.classList.toggle("like");
 
-        console.log("el .src :")
-        console.log(document.querySelector("#like").src)
+        console.log(document.querySelector("#like").getAttribute("src"))
 
-        console.log("origin :")
-        console.log(window.location.origin)
 
-        console.log("origin + text :")
-        console.log(window.location.origin + "/img/like.png")
 
-        if(document.querySelector("#like").src == (window.location.origin + "/img/like.png")){
+
+
+        if(document.querySelector("#like").getAttribute("src") ==  "./img/like.png"){
             like.src = "./img/likestatus.png"
-            console.log("aca1")
+    
         }else{
             like.src = "./img/like.png"
-            console.log("aca2")
+
         }
     }
     setTimeout(loading1, 500);
@@ -258,20 +255,12 @@ function dislike(){
     function loading1(){
         dislike.classList.toggle("dislike");
 
-        console.log("el .src :")
-        console.log(document.querySelector("#dislike").src)
-
-        console.log("origin :")
-        console.log(window.location.origin)
-
-        console.log("origin + text :")
-        console.log(window.location.origin + "/img/like.png")
-
-        if(document.querySelector("#dislike").src == (window.location.origin + "/img/dislike.png")){
+        if(document.querySelector("#dislike").getAttribute("src") == "./img/dislike.png"){
             dislike.src = "./img/dislikestatus.png"
         }else{
             dislike.src = "./img/dislike.png"
         }
+
     }
     setTimeout(loading1, 500);
     document.querySelector("#like").src = "./img/like.png";
