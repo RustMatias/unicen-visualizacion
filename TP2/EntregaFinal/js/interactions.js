@@ -213,6 +213,28 @@ if(document.querySelector("#viewGamesSearch") != null){
     }) 
 }
 
+function like(){
+    let like = document.querySelector("#like");
+    like.classList.toggle("like");
+    function loading1(){
+        like.classList.toggle("like");
+    }
+    
+    setTimeout(loading1, 1000);
+}
+
+function dislike(){
+    let like = document.querySelector("#dislike");
+    like.classList.toggle("dislike");
+    function loading1(){
+        like.classList.toggle("dislike");
+    }
+    
+    setTimeout(loading1, 1000);
+}
+
+
+
 function loadingGamePage(){
     window.scrollTo(0,0);
     let loading = document.querySelector("#loadingOverlay");

@@ -1638,7 +1638,106 @@ font-size: 22px;
     } */
 }
 
+
+
+.like{
+    animation: like 0.5s linear;
+}
+
+.dislike{
+    animation: dislike 0.5s linear 
+}
+
+
+@keyframes like {
+    0%{
+        transform: translatey(0px);
+    }
+    25%{
+        transform: rotate(-45deg);
+        transform: translatey(-15px);
+    }
+    50%{
+        transform: translatey(-10px);
+    }
+    75%{
+        transform: rotate(45deg);
+        transform: translatey(-15px);
+
+    }
+    100%{
+        transform: translatey(0px);
+    }
+    
+}
+
+@keyframes dislike {
+    0%{
+        transform: translatey(0px);
+    }
+    25%{
+        transform: rotate(-45deg);
+        transform: translatey(15px);
+    }
+    50%{
+        transform: translatey(10px);
+    }
+    75%{
+        transform: rotate(45deg);
+        transform: translatey(15px);
+
+    }
+    100%{
+       
+        transform: translatey(0px);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
