@@ -1639,14 +1639,16 @@ font-size: 22px;
 }
 
 
-
 .like{
     animation: like 0.5s linear;
+    
 }
 
 .dislike{
-    animation: dislike 0.5s linear 
+    animation: dislike 0.5s linear;
 }
+
+  
 
 
 @keyframes like {
@@ -1683,12 +1685,12 @@ font-size: 22px;
         transform: translatey(10px);
     }
     75%{
-        transform: rotate(45deg);
+        
         transform: translatey(15px);
 
     }
     100%{
-       
+        
         transform: translatey(0px);
     }
     

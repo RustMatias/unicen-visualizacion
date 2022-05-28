@@ -213,24 +213,68 @@ if(document.querySelector("#viewGamesSearch") != null){
     }) 
 }
 
+
+
+
+
 function like(){
+
     let like = document.querySelector("#like");
     like.classList.toggle("like");
+    
+
     function loading1(){
         like.classList.toggle("like");
+
+        console.log("el .src :")
+        console.log(document.querySelector("#like").src)
+
+        console.log("origin :")
+        console.log(window.location.origin)
+
+        console.log("origin + text :")
+        console.log(window.location.origin + "/img/like.png")
+
+        if(document.querySelector("#like").src == (window.location.origin + "/img/like.png")){
+            like.src = "./img/likestatus.png"
+            console.log("aca1")
+        }else{
+            like.src = "./img/like.png"
+            console.log("aca2")
+        }
     }
-    
-    setTimeout(loading1, 1000);
+    setTimeout(loading1, 500);
+    document.querySelector("#dislike").src = "./img/dislike.png";  
 }
 
+
+
+
 function dislike(){
-    let like = document.querySelector("#dislike");
-    like.classList.toggle("dislike");
-    function loading1(){
-        like.classList.toggle("dislike");
-    }
+    let dislike = document.querySelector("#dislike");
+    dislike.classList.toggle("dislike");
     
-    setTimeout(loading1, 1000);
+
+    function loading1(){
+        dislike.classList.toggle("dislike");
+
+        console.log("el .src :")
+        console.log(document.querySelector("#dislike").src)
+
+        console.log("origin :")
+        console.log(window.location.origin)
+
+        console.log("origin + text :")
+        console.log(window.location.origin + "/img/like.png")
+
+        if(document.querySelector("#dislike").src == (window.location.origin + "/img/dislike.png")){
+            dislike.src = "./img/dislikestatus.png"
+        }else{
+            dislike.src = "./img/dislike.png"
+        }
+    }
+    setTimeout(loading1, 500);
+    document.querySelector("#like").src = "./img/like.png";
 }
 
 
