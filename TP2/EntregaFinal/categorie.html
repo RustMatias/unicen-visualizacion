@@ -114,27 +114,29 @@
     </article>
 
 
+ 
     <!-- Desplegable busqueda -->
 
     <article id="busqueda" class="busqueda">
         <div class="close-div">
-            <button class="close" onclick="openBusqueda()">X</button>
+            <button class="close" onclick="openBusqueda()"><img src="/img/close.png" alt=""></button>
         </div>
         <div class="sorter">
             <div class="filter">
                 <select >
-                    <option value="">No sort</option>
-                    <option value="">A-Z</option>
-                    <option value="">Z-A</option>
-                    <option value="">Recents</option>
-                    <option value="">Populars</option>
+                    <option value="">Filter</option>
+                    <option value="">Category</option>
+                    <option value="">Games</option>
                 </select>
             </div>
             <div class="filter">
                 <select>
-                    <option value="">No filter</option>
-                    <option value="">Category</option>
-                    <option value="">Games</option>
+                    
+                    <option value="">Sort</option>
+                    <option value="">A-Z</option>
+                    <option value="">Z-A</option>
+                    <option value="">Recents</option>
+                    <option value="">Populars</option>
                 </select>
             </div>
             <div class="browser">
@@ -148,8 +150,8 @@
                 <a href="">Sugestions</a>
                 
                 <div class="visualization">
-                    <!-- Hacete el grid mati -->
-                    <div class="contenedor cont-browser"><
+                    
+                    <div class="contenedor cont-browser">
                         <figure>
                             <img src="img/game1.jpg" alt="">
                             <div class="capa" id="openGameInfo" onclick="openGameInfo()">
@@ -162,6 +164,17 @@
                             </div>
                         </figure>
                         
+                        <figure>
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>Nombre del juego</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
                         <figure>
                             <img src="img/game1.jpg" alt="">
                             <div class="capa" id="openGameInfo" onclick="openGameInfo()">
@@ -198,18 +211,24 @@
                                 </div>               
                             </div>
                         </figure>
+                        <figure>
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>Nombre del juego</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
                         
                     </div>
                     
                 </div>
-                <a href="">Most played</a>
-                <div class="visualization">
-                    <!-- Hacete el grid mati -->
-                </div>
+                
             </div>
-            <div class="scroll">
-
-            </div>
+            
         </div>
         
         <button  class="all-games" onclick="loadingAllGames()">All the games</button>
@@ -228,7 +247,234 @@
     </div>
 
 
+<!--INFOGAMES-->
+<div class="game-info-popup" id="gameInfoPopup" >
+    
+        
+    <div class="container-up-game-info">
 
+        <div class="grande-up">
+
+            <div>
+
+                <div class="nombre-del-juego-popup">
+                    <h1>CS : Global Offensive</h1>
+                    <div class="fondo-nombre-del-juego">
+                        <p>
+                            Counter-Strike: Global Offensive (CS:GO) is a first-person shooter video game developed by Valve Corporation and Hidden Path Entertainment. It is the fourth game in the Counter-Strike series. It was released on the market in August 2012 for Microsoft Windows, macOS and Xbox 360 and PlayStation 3 platforms.
+                        </p>
+                    </div>
+                </div>
+
+            
+                <div class="flex-popup-info-games">
+
+                    <div class="dual-flex-popup-info-games">
+                        <h2>How to play</h2>
+                        <p>CS:GO relies heavily on teamwork and map knowledge. Even on the lowest ranks people will know (most) main callouts, and while it’s not necessary to be able to name every inch of the map (you’re here to play after all, not to study) it is important to know the main calls and what a map looks like.
+                            
+                        </p>
+                    </div>
+
+                    <div class="dual-flex-popup-info-games">
+                        <h2>Controls</h2>
+                        <div class="keys-info-games"><img src="./img/keys.png"></div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="links-info-games">
+                <h2>Links</h2>
+                <div>
+                   
+                    <img src="./img/facebooklink.png" alt="">
+                    
+                    <img src="./img/instagramlink.png" alt="">
+                    
+                    <img src="./img/twitterlink.png" alt="">
+                </div>
+                
+            </div>
+
+        </div>
+
+        <button class="lets-play" onclick="loadingGamePage()">
+            <h2>Let's Play</h2>
+            <img src="./img/playgreen.png" alt="">
+        </button>
+
+    </div>
+    <div class="container-bot-game-info">
+        <div class="carousel">
+            <h2>Gallery</h2>
+            <div class="slick-list carousel-game-info" id="slick-list">
+                <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                </button>
+                <div class="slick-track" id="track">
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+                                <h4><small>Share Your Message</small>Watch</h4>
+                                <picture>
+                                    <img src="./img/game1.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                </button>
+            </div>
+        </div>
+          
+    </div>
+    
+</div>
 
 
 

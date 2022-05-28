@@ -105,7 +105,7 @@ function openBusqueda(){
 
 function openGameInfo(){
 
-
+    window.scrollTo(0,0);
         //agarra del dom
         let gameInfo = document.querySelector("#gameInfoPopup");
         console.log(gameInfo);
@@ -140,7 +140,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                         <div class="play-fav">   
         
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                            <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
                                         </div>               
                                     </div>
                                 </figure>
@@ -152,7 +152,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                     <div class="play-fav">   
     
                                         <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                        <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                        <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
                                     </div>               
                                 </div>
                             </figure>
@@ -166,7 +166,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                         <div class="play-fav">   
         
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                            <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
                                         </div>               
                                     </div>
                                 </figure>
@@ -177,7 +177,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                     <div class="play-fav">   
     
                                         <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                        <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                        <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
                                     </div>               
                                 </div>
                             </figure>
@@ -191,7 +191,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                         <div class="play-fav">   
         
                                             <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                            <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
                                         </div>               
                                     </div>
                                 </figure>
@@ -202,7 +202,7 @@ if(document.querySelector("#viewGamesSearch") != null){
                                     <div class="play-fav">   
     
                                         <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                        <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                        <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
                                     </div>               
                                 </div>
                             </figure>
