@@ -244,7 +244,16 @@ function like(){
     document.querySelector("#dislike").src = "./img/dislike.png";  
 }
 
+function favoriteclick(){
+    let fav = document.querySelector("favoriteclick")
+    if(document.querySelector("#favoriteclick").getAttribute("src") ==  "./img/favOn.png"){
+        fav.src = "./img/noFavGame.png"
 
+    }else{
+        fav.src = "./img/favOn.png"
+
+    }
+}
 
 
 function dislike(){

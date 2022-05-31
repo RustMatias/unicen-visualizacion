@@ -1356,9 +1356,35 @@ font-size: 22px;
 .lets-play img{
     height: 255px;
     width: 255px;
-    
+    cursor: pointer;
     
 }
+
+.lets-play img:hover{
+    animation: playbutton 0.4s infinite ;
+
+    
+}
+@keyframes playbutton{
+    0%{
+        transform: translatex(0px);
+    }
+    25%{
+        transform: translatex(-5px);
+    }
+    50%{
+        transform: translatex(5px);
+    }
+    75%{
+        transform: translatex(-5px);
+    }
+    100%{
+        transform: translatex(0px);
+    }
+}
+
+
+
 
 /* carousel */
 
@@ -1648,6 +1674,9 @@ font-size: 22px;
     animation: dislike 0.5s linear;
 }
 
+.l-dl{
+    cursor:pointer;
+}
   
 
 
