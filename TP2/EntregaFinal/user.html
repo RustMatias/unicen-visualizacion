@@ -24,7 +24,16 @@
         <button onclick="openBusqueda()" class="header-busqueda">
             <img src="./img/search.png" alt="acorn.logue" class="footer-logo">
         </button>
+
+        <button onclick="openBusqueda()" class="burguer header-busqueda">
+            <img src="./img/burger.png" alt="acorn.logue" class="footer-logo">
+        </button>
         
+        <button href="index.html" class="logo-responsive header-busqueda" onclick="loadingHome()">
+            <img src="./img/acorn.png" 
+                alt="acorn.logue"
+                class="footer-logo">
+        </button>
 
         <ul class="header-categories">
             <li><button onclick="loadingCat()">Action</button></li>
@@ -33,19 +42,18 @@
             <li><button onclick="loadingCat()">Survival</button></li>
             <li><button  onclick="loadingCat()">Terror</button></li>
             <li>
-                <button href="">View More ˬ </button>
+                <button href="">Ver mas ˬ </button>
                 <ul class="vertical-drop-menu">
-                    <li><button  onclick="loadingCat()">Sport</button></li>
-                    <li><button  onclick="loadingCat()">Strategy</button></li>
+                    <li><button  onclick="loadingCat()">Deportive</button></li>
+                    <li><button  onclick="loadingCat()">Estrategy</button></li>
                     <li><button  onclick="loadingCat()">Simulation</button></li>
-                    <li><button  onclick="loadingCat()">Adventure</button></li>
-                    <li><button  onclick="loadingCat()">Musical</button></li>
+                    <li><button  onclick="loadingCat()">Musicaly</button></li>
                 </ul>
             </li>
         </ul>
 
         <div class="header-login-loge" id="showLogin">
-            <button class="header-login">login</button>
+            <button class="header-login" onclick="loadingFavorites()">Favorites</button>
             <img src="./img/user.png" alt="acorn.logue" class="footer-logo">
         </div>
     </header>
@@ -135,16 +143,7 @@
 
     <div class="loading-animation" id="loadingOverlay">
         <img src="img/acorn.png" alt="">
-        <!-- <p class="loading-text">Loading</p>   -->
-        <!--  -->
-        <p class="l">L</p>
-        <p class="o">o</p>
-        <p class="a">a</p>
-        <p class="d">d</p>
-        <p class="i">i</p>
-        <p class="n">n</p>
-        <p class="g">g</p>
-        <!--  -->
+        <p class="loading-text">Loading</p>  
         <p class="dot1">.</p>
         <p class="dot2">.</p>
         <p class="dot3">.</p>
@@ -789,7 +788,7 @@
                 <h2>About Us</h2>
                 <ul class="footer-item-search">
                     <li onclick="loadingHome()"> Home </li>
-                    <li> Account </li>
+                    <li> Acount </li>
                     <li> Privacy and Security </li>
                 </ul>
             </section>
@@ -797,14 +796,14 @@
             <section class="footer-links">
                 <h2>Catalog</h2>
                 <ul class="footer-item-search-colum">
-                    <li onclick="loadingCat()"> Action </li>
+                    <li onclick="loadingCat()"> Acction </li>
                     <li onclick="loadingCat()"> Survival </li>
                     <li onclick="loadingCat()"> RPG </li>
                     <li onclick="loadingCat()"> Terror </li>
-                    <li onclick="loadingCat()"> Adventure </li>
+                    <li onclick="loadingCat()"> Aventura </li>
                     <li onclick="loadingCat()"> Arcade </li>
                     <li onclick="loadingCat()"> MMO </li>
-                    <li onclick="loadingCat()"> Strategy</li>
+                    <li onclick="loadingCat()"> Estrategy</li>
                 </ul>
             </section>
     
@@ -835,7 +834,7 @@
                 <h1>AcornStudios</h1>
             </button>
     
-            <p>2022 AcornStudios | All Rights Reserved</p>
+            <p>2022 Acornstudios | All Rights Reserved</p>
     
         </article>
     
