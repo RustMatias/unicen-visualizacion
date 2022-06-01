@@ -33,18 +33,19 @@
             <li><button onclick="loadingCat()">Survival</button></li>
             <li><button  onclick="loadingCat()">Terror</button></li>
             <li>
-                <button href="">Ver mas ˬ </button>
+                <button href="">View More ˬ </button>
                 <ul class="vertical-drop-menu">
-                    <li><button  onclick="loadingCat()">Deportivo</button></li>
-                    <li><button  onclick="loadingCat()">Estrategia</button></li>
-                    <li><button  onclick="loadingCat()">Simulacion</button></li>
-                    <li><button  onclick="loadingCat()">Musicales</button></li>
+                    <li><button  onclick="loadingCat()">Sport</button></li>
+                    <li><button  onclick="loadingCat()">Strategy</button></li>
+                    <li><button  onclick="loadingCat()">Simulation</button></li>
+                    <li><button  onclick="loadingCat()">Adventure</button></li>
+                    <li><button  onclick="loadingCat()">Musical</button></li>
                 </ul>
             </li>
         </ul>
 
         <div class="header-login-loge" id="showLogin">
-            <button class="header-login" onclick="loadingFavorites()">Favorites</button>
+            <button class="header-login">login</button>
             <img src="./img/user.png" alt="acorn.logue" class="footer-logo">
         </div>
     </header>
@@ -92,7 +93,7 @@
                                 <h2>Nombre del juego</h2> 
                                 <div class="play-fav">   
 
-                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                     <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
                                 </div>               
                             </div>
@@ -104,7 +105,7 @@
                                 <h2>Nombre del juego</h2> 
                                 <div class="play-fav">   
 
-                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                     <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
                                 </div>               
                             </div>
@@ -118,7 +119,7 @@
                                 <h2>Nombre del juego</h2> 
                                 <div class="play-fav">   
 
-                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                     <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
                                 </div>               
                             </div>
@@ -129,7 +130,7 @@
                                 <h2>Nombre del juego</h2> 
                                 <div class="play-fav">   
 
-                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                     <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
                                 </div>               
                             </div>
@@ -157,22 +158,35 @@
 
     <div class="loading-animation" id="loadingOverlay">
         <img src="img/acorn.png" alt="">
-        <p class="loading-text">Loading</p>  
+        <!-- <p class="loading-text">Loading</p>   -->
+        <!--  -->
+        <p class="l">L</p>
+        <p class="o">o</p>
+        <p class="a">a</p>
+        <p class="d">d</p>
+        <p class="i">i</p>
+        <p class="n">n</p>
+        <p class="g">g</p>
+        <!--  -->
         <p class="dot1">.</p>
         <p class="dot2">.</p>
         <p class="dot3">.</p>
     </div>
     
+    <div class="overlay" id="overlay"></div>
+
     <!--INFOGAMES-->
     <div class="game-info-popup" id="gameInfoPopup" >
     
-        
+        <div class="close-div-infogames">
+            <button class="close" id="closeInfo"><img src="img/close.png" alt=""></button>
+        </div>
         <div class="container-up-game-info">
-
+    
             <div class="grande-up">
-
+    
                 <div>
-
+    
                     <div class="nombre-del-juego-popup">
                         <h1>CS : Global Offensive</h1>
                         <div class="fondo-nombre-del-juego">
@@ -181,27 +195,27 @@
                             </p>
                         </div>
                     </div>
-
+    
                 
                     <div class="flex-popup-info-games">
-
+    
                         <div class="dual-flex-popup-info-games">
                             <h2>How to play</h2>
                             <p>CS:GO relies heavily on teamwork and map knowledge. Even on the lowest ranks people will know (most) main callouts, and while it’s not necessary to be able to name every inch of the map (you’re here to play after all, not to study) it is important to know the main calls and what a map looks like.
                                 
                             </p>
                         </div>
-
+    
                         <div class="dual-flex-popup-info-games">
                             <h2>Controls</h2>
                             <div class="keys-info-games"><img src="./img/keys.png"></div>
                             
                         </div>
-
+    
                     </div>
-
+    
                 </div>
-
+    
                 <div class="links-info-games">
                     <h2>Links</h2>
                     <div>
@@ -214,14 +228,14 @@
                     </div>
                     
                 </div>
-
+    
             </div>
-
-            <button class="lets-play" onclick="loadingGamePage()">
+    
+            <button class="lets-play">
                 <h2>Let's Play</h2>
-                <img src="./img/playgreen.png" alt="">
+                <img src="./img/playgreen.png" alt="" onclick="loadingGamePage()">
             </button>
-
+    
         </div>
         <div class="container-bot-game-info">
             <div class="carousel">
@@ -470,7 +484,7 @@
                             <h2>Counter Strike: Global Offensive</h2> 
                             <div class="play-fav">   
 
-                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                 <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
                             </div>               
                         </div>
@@ -483,7 +497,7 @@
                             <h2>Poker</h2> 
                             <div class="play-fav">   
 
-                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                 <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
                             </div>               
                         </div>
@@ -496,7 +510,7 @@
                             <h2>Minecraft</h2> 
                             <div class="play-fav">   
 
-                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                 <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
                             </div>               
                         </div>
@@ -509,7 +523,7 @@
                             <h2>Cities Skylines</h2> 
                             <div class="play-fav">   
 
-                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                 <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
                             </div>               
                         </div>
@@ -522,7 +536,7 @@
                             <h2>Counter Strike: Global Offensive</h2> 
                             <div class="play-fav">   
 
-                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                 <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
                             </div>               
                         </div>
@@ -535,7 +549,7 @@
                             <h2>Poker</h2> 
                             <div class="play-fav">   
 
-                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                 <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
                             </div>               
                         </div>
@@ -548,7 +562,7 @@
                             <h2>Minecraft</h2> 
                             <div class="play-fav">   
 
-                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                 <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
                             </div>               
                         </div>
@@ -561,7 +575,7 @@
                             <h2>Cities Skylines</h2> 
                             <div class="play-fav">   
 
-                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                <a href=""><img src="./img/favGame.png" alt="" class="fav-contenedor"></a>
                                 <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
                             </div>               
                         </div>
@@ -597,7 +611,7 @@
                 <h2>About Us</h2>
                 <ul class="footer-item-search">
                     <li onclick="loadingHome()"> Home </li>
-                    <li> Acount </li>
+                    <li> Account </li>
                     <li> Privacy and Security </li>
                 </ul>
             </section>
@@ -605,14 +619,14 @@
             <section class="footer-links">
                 <h2>Catalog</h2>
                 <ul class="footer-item-search-colum">
-                    <li onclick="loadingCat()"> Acction </li>
+                    <li onclick="loadingCat()"> Action </li>
                     <li onclick="loadingCat()"> Survival </li>
                     <li onclick="loadingCat()"> RPG </li>
                     <li onclick="loadingCat()"> Terror </li>
-                    <li onclick="loadingCat()"> Aventura </li>
+                    <li onclick="loadingCat()"> Adventure </li>
                     <li onclick="loadingCat()"> Arcade </li>
                     <li onclick="loadingCat()"> MMO </li>
-                    <li onclick="loadingCat()"> Estrategy</li>
+                    <li onclick="loadingCat()"> Strategy</li>
                 </ul>
             </section>
     
@@ -643,7 +657,7 @@
                 <h1>AcornStudios</h1>
             </button>
     
-            <p>2022 Acornstudios | All Rights Reserved</p>
+            <p>2022 AcornStudios | All Rights Reserved</p>
     
         </article>
     

@@ -26,7 +26,6 @@
         </button>
         
 
-      
         <ul class="header-categories">
             <li><button onclick="loadingCat()">Action</button></li>
             <li><button  onclick="loadingCat()">Roleplay</button></li>
@@ -34,12 +33,13 @@
             <li><button onclick="loadingCat()">Survival</button></li>
             <li><button  onclick="loadingCat()">Terror</button></li>
             <li>
-                <button href="">Ver mas ˬ </button>
+                <button href="">View More ˬ </button>
                 <ul class="vertical-drop-menu">
-                    <li><button  onclick="loadingCat()">Deportive</button></li>
-                    <li><button  onclick="loadingCat()">Estrategy</button></li>
+                    <li><button  onclick="loadingCat()">Sport</button></li>
+                    <li><button  onclick="loadingCat()">Strategy</button></li>
                     <li><button  onclick="loadingCat()">Simulation</button></li>
-                    <li><button  onclick="loadingCat()">Musicaly</button></li>
+                    <li><button  onclick="loadingCat()">Adventure</button></li>
+                    <li><button  onclick="loadingCat()">Musical</button></li>
                 </ul>
             </li>
         </ul>
@@ -84,13 +84,10 @@
 
     </article>
 
-
-
-
      <!-- Register -->
     <article class="register" id="register">
         <div class="close-div">
-            <button class="close" id="closeRegister">X</button>
+            <button class="close" id="closeRegister"><img src="img/close.png" alt=""></button>
         </div>
         <h1> Register </h1>
         <form action="">
@@ -105,11 +102,11 @@
             <label for="">Repeat your password</label>
             <input type="text" class="input-popup" placeholder="Confirm your password here">
            
-            <button class="register-button" id="goToUser">Create Acount</button>
+            <button class="register-button" onclick="loadingUser(event)">Create Account</button>
            
             
         </form>
-        <div class="dha">
+        <div class="underline">
             <button id="goToLogin">Already have account</button>
         </div>
     </article>
@@ -200,7 +197,16 @@
 
     <div class="loading-animation" id="loadingOverlay">
         <img src="img/acorn.png" alt="">
-        <p class="loading-text">Loading</p>  
+        <!-- <p class="loading-text">Loading</p>   -->
+        <!--  -->
+        <p class="l">L</p>
+        <p class="o">o</p>
+        <p class="a">a</p>
+        <p class="d">d</p>
+        <p class="i">i</p>
+        <p class="n">n</p>
+        <p class="g">g</p>
+        <!--  -->
         <p class="dot1">.</p>
         <p class="dot2">.</p>
         <p class="dot3">.</p>
@@ -209,8 +215,10 @@
 
 <!--INFOGAMES-->
     <div class="game-info-popup" id="gameInfoPopup" >
-    
         
+        <div class="close-div-infogames">
+            <button class="close" id="closeInfo"><img src="img/close.png" alt=""></button>
+        </div>
         <div class="container-up-game-info">
 
             <div class="grande-up">
@@ -249,7 +257,7 @@
                 <div class="links-info-games">
                     <h2>Links</h2>
                     <div>
-                       
+                    
                         <img src="./img/facebooklink.png" alt="">
                         
                         <img src="./img/instagramlink.png" alt="">
@@ -261,9 +269,9 @@
 
             </div>
 
-            <button class="lets-play" onclick="loadingGamePage()">
+            <button class="lets-play">
                 <h2>Let's Play</h2>
-                <img src="./img/playgreen.png" alt="">
+                <img src="./img/playgreen.png" alt="" onclick="loadingGamePage()">
             </button>
 
         </div>
@@ -431,7 +439,7 @@
                     </button>
                 </div>
             </div>
-              
+            
         </div>
         
     </div>
@@ -476,7 +484,7 @@
                     <img src="./img/like.png" alt="" onclick="like()" id="like" class="l-dl">
                     <img src="./img/dislike.png" alt="" onclick="dislike()" id="dislike" class="l-dl">
 
-                    <img src="./img/noFav.png" alt="">
+                    <img src="./img/noFav.png" alt="" id="favoriteclick" onclick="favoriteclick()">
                     <img src="./img/share.png" alt="">
                     <img src="./img/expand.png" alt="">
                 </div>
@@ -831,7 +839,7 @@
                 <h2>About Us</h2>
                 <ul class="footer-item-search">
                     <li onclick="loadingHome()"> Home </li>
-                    <li> Acount </li>
+                    <li> Account </li>
                     <li> Privacy and Security </li>
                 </ul>
             </section>
@@ -839,14 +847,14 @@
             <section class="footer-links">
                 <h2>Catalog</h2>
                 <ul class="footer-item-search-colum">
-                    <li onclick="loadingCat()"> Acction </li>
+                    <li onclick="loadingCat()"> Action </li>
                     <li onclick="loadingCat()"> Survival </li>
                     <li onclick="loadingCat()"> RPG </li>
                     <li onclick="loadingCat()"> Terror </li>
-                    <li onclick="loadingCat()"> Aventura </li>
+                    <li onclick="loadingCat()"> Adventure </li>
                     <li onclick="loadingCat()"> Arcade </li>
                     <li onclick="loadingCat()"> MMO </li>
-                    <li onclick="loadingCat()"> Estrategy</li>
+                    <li onclick="loadingCat()"> Strategy</li>
                 </ul>
             </section>
     
@@ -877,7 +885,7 @@
                 <h1>AcornStudios</h1>
             </button>
     
-            <p>2022 Acornstudios | All Rights Reserved</p>
+            <p>2022 AcornStudios | All Rights Reserved</p>
     
         </article>
     

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorites</title>
+    <title>User Page</title>
     <link rel="icon" href="img/acorn.png" type="icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,16 +24,7 @@
         <button onclick="openBusqueda()" class="header-busqueda">
             <img src="./img/search.png" alt="acorn.logue" class="footer-logo">
         </button>
-
-        <button onclick="openBusqueda()" class="burguer header-busqueda">
-            <img src="./img/burger.png" alt="acorn.logue" class="footer-logo">
-        </button>
         
-        <button href="index.html" class="logo-responsive header-busqueda" onclick="loadingHome()">
-            <img src="./img/acorn.png" 
-                alt="acorn.logue"
-                class="footer-logo">
-        </button>
 
         <ul class="header-categories">
             <li><button onclick="loadingCat()">Action</button></li>
@@ -42,18 +33,19 @@
             <li><button onclick="loadingCat()">Survival</button></li>
             <li><button  onclick="loadingCat()">Terror</button></li>
             <li>
-                <button href="">Ver mas ˬ </button>
+                <button href="">View More ˬ </button>
                 <ul class="vertical-drop-menu">
-                    <li><button  onclick="loadingCat()">Deportive</button></li>
-                    <li><button  onclick="loadingCat()">Estrategy</button></li>
+                    <li><button  onclick="loadingCat()">Sport</button></li>
+                    <li><button  onclick="loadingCat()">Strategy</button></li>
                     <li><button  onclick="loadingCat()">Simulation</button></li>
-                    <li><button  onclick="loadingCat()">Musicaly</button></li>
+                    <li><button  onclick="loadingCat()">Adventure</button></li>
+                    <li><button  onclick="loadingCat()">Musical</button></li>
                 </ul>
             </li>
         </ul>
 
         <div class="header-login-loge" id="showLogin">
-            <button class="header-login" onclick="loadingFavorites()">Favorites</button>
+            <button class="header-login">login</button>
             <img src="./img/user.png" alt="acorn.logue" class="footer-logo">
         </div>
     </header>
@@ -143,23 +135,35 @@
 
     <div class="loading-animation" id="loadingOverlay">
         <img src="img/acorn.png" alt="">
-        <p class="loading-text">Loading</p>  
+        <!-- <p class="loading-text">Loading</p>   -->
+        <!--  -->
+        <p class="l">L</p>
+        <p class="o">o</p>
+        <p class="a">a</p>
+        <p class="d">d</p>
+        <p class="i">i</p>
+        <p class="n">n</p>
+        <p class="g">g</p>
+        <!--  -->
         <p class="dot1">.</p>
         <p class="dot2">.</p>
         <p class="dot3">.</p>
     </div>
     
+    <div class="overlay" id="overlay"></div>
 
     <!--INFOGAMES-->
     <div class="game-info-popup" id="gameInfoPopup" >
     
-        
+        <div class="close-div-infogames">
+            <button class="close" id="closeInfo"><img src="img/close.png" alt=""></button>
+        </div>
         <div class="container-up-game-info">
-
+    
             <div class="grande-up">
-
+    
                 <div>
-
+    
                     <div class="nombre-del-juego-popup">
                         <h1>CS : Global Offensive</h1>
                         <div class="fondo-nombre-del-juego">
@@ -168,27 +172,27 @@
                             </p>
                         </div>
                     </div>
-
+    
                 
                     <div class="flex-popup-info-games">
-
+    
                         <div class="dual-flex-popup-info-games">
                             <h2>How to play</h2>
                             <p>CS:GO relies heavily on teamwork and map knowledge. Even on the lowest ranks people will know (most) main callouts, and while it’s not necessary to be able to name every inch of the map (you’re here to play after all, not to study) it is important to know the main calls and what a map looks like.
                                 
                             </p>
                         </div>
-
+    
                         <div class="dual-flex-popup-info-games">
                             <h2>Controls</h2>
                             <div class="keys-info-games"><img src="./img/keys.png"></div>
                             
                         </div>
-
+    
                     </div>
-
+    
                 </div>
-
+    
                 <div class="links-info-games">
                     <h2>Links</h2>
                     <div>
@@ -201,14 +205,14 @@
                     </div>
                     
                 </div>
-
+    
             </div>
-
-            <button class="lets-play" onclick="loadingGamePage()">
+    
+            <button class="lets-play">
                 <h2>Let's Play</h2>
-                <img src="./img/playgreen.png" alt="">
+                <img src="./img/playgreen.png" alt="" onclick="loadingGamePage()">
             </button>
-
+    
         </div>
         <div class="container-bot-game-info">
             <div class="carousel">
@@ -378,7 +382,6 @@
         </div>
         
     </div>
-
 
 
 
@@ -786,7 +789,7 @@
                 <h2>About Us</h2>
                 <ul class="footer-item-search">
                     <li onclick="loadingHome()"> Home </li>
-                    <li> Acount </li>
+                    <li> Account </li>
                     <li> Privacy and Security </li>
                 </ul>
             </section>
@@ -794,14 +797,14 @@
             <section class="footer-links">
                 <h2>Catalog</h2>
                 <ul class="footer-item-search-colum">
-                    <li onclick="loadingCat()"> Acction </li>
+                    <li onclick="loadingCat()"> Action </li>
                     <li onclick="loadingCat()"> Survival </li>
                     <li onclick="loadingCat()"> RPG </li>
                     <li onclick="loadingCat()"> Terror </li>
-                    <li onclick="loadingCat()"> Aventura </li>
+                    <li onclick="loadingCat()"> Adventure </li>
                     <li onclick="loadingCat()"> Arcade </li>
                     <li onclick="loadingCat()"> MMO </li>
-                    <li onclick="loadingCat()"> Estrategy</li>
+                    <li onclick="loadingCat()"> Strategy</li>
                 </ul>
             </section>
     
@@ -832,7 +835,7 @@
                 <h1>AcornStudios</h1>
             </button>
     
-            <p>2022 Acornstudios | All Rights Reserved</p>
+            <p>2022 AcornStudios | All Rights Reserved</p>
     
         </article>
     

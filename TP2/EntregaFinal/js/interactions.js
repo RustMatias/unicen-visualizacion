@@ -23,23 +23,35 @@ if(document.querySelector("#closeLogin") != null){
 }
 
 
-if(  document.querySelector("#overlay") != null){
+if(document.querySelector("#overlay") != null){
     document.querySelector("#overlay").addEventListener( "click", ()=>{
 
-        let loginoverlay = document.querySelector("#login");
+        if(document.querySelector("#login")!=null){
+
+            let loginoverlay = document.querySelector("#login");
+            loginoverlay.classList.toggle("show");
+
+            if(loginoverlay.classList != "login"){
+                loginoverlay.classList.toggle("show");
+            }
+        }
         let overlay = document.querySelector("#overlay");
-        let registeroverlay = document.querySelector("#register");
-    
-        loginoverlay.classList.toggle("show");
+        
+        if(document.querySelector("#register")!=null){
+        
+            let registeroverlay = document.querySelector("#register");
+            
+            if(registeroverlay.classList != "register"){
+                registeroverlay.classList.toggle("show");
+            }
+        }
+            let gameoverlay = document.querySelector("#gameInfoPopup"); 
+
+        
         overlay.classList.toggle("show");
 
-        if(loginoverlay.classList != "login"){
-            loginoverlay.classList.toggle("show");
-        }
-
-
-        if(registeroverlay.classList != "register"){
-            registeroverlay.classList.toggle("show");
+        if(gameoverlay.classList != "gameInfoPopup"){
+            gameoverlay.classList.toggle("show");
         }
 
         if(document.querySelector("#gameInfoPopup") != null &&
@@ -50,9 +62,6 @@ if(  document.querySelector("#overlay") != null){
         
     })
 }
-
-
-
 
 if(document.querySelector("#goToRegister") != null){
     document.querySelector("#goToRegister").addEventListener( "click", ()=>{
@@ -73,6 +82,18 @@ if(document.querySelector("#closeRegister") != null){
         registeroverlay.classList.toggle("show");
         loginoverlay.classList.toggle("show");
         overlay.classList.toggle("show");
+    
+    }  )   
+}
+
+if(document.querySelector("#closeInfo") != null){
+    document.querySelector("#closeInfo").addEventListener( "click", ()=>{
+
+
+        let overlay2 = document.querySelector("#overlay");
+        let gameoverlay = document.querySelector("#gameInfoPopup"); 
+        gameoverlay.classList.toggle("show");
+        overlay2.classList.toggle("show");
     
     }  )   
 }
@@ -229,9 +250,6 @@ function like(){
         console.log(document.querySelector("#like").getAttribute("src"))
 
 
-
-
-
         if(document.querySelector("#like").getAttribute("src") ==  "./img/like.png"){
             like.src = "./img/likestatus.png"
     
@@ -244,7 +262,7 @@ function like(){
     document.querySelector("#dislike").src = "./img/dislike.png";  
 }
 
-function favoriteclick(){
+/* function favoriteclick(){
     let fav = document.querySelector("favoriteclick")
     if(document.querySelector("#favoriteclick").getAttribute("src") ==  "./img/favOn.png"){
         fav.src = "./img/noFavGame.png"
@@ -252,6 +270,21 @@ function favoriteclick(){
     }else{
         fav.src = "./img/favOn.png"
 
+    }
+} */
+
+function favoriteclick(){
+    let fav = document.querySelector("#favoriteclick")
+    fav.classList.toggle("like");
+    
+
+    if(document.querySelector("#favoriteclick").getAttribute("src") ==  "./img/fav.png"){
+        fav.src = "./img/noFav.png"
+        
+
+    }else{
+        fav.src = "./img/fav.png"
+        
     }
 }
 
