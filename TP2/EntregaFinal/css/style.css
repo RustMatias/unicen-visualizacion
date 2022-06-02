@@ -681,9 +681,9 @@ header li button{
 
 .view-games{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 16px 32px 32px 32px;
+    margin: 16px 32px 0 32px;
 }
 
 .view-browser{
@@ -694,6 +694,7 @@ header li button{
 
 .view-browser > a{
     margin-top: 16px;
+    width: fit-content;
     text-decoration: none;
     color: var(--primary);
     font-size: var(--subtitle);
@@ -701,6 +702,12 @@ header li button{
 
 .cont-browser >figure{
     margin: 16px
+
+}
+
+.cont-browser{
+    display: flex;
+    justify-content: space-around;
 }
 
 .scroll{
@@ -722,6 +729,7 @@ header li button{
     float: right;
     margin-right: 32px;
     background:none;
+    text-decoration: underline;
 }
 
 /* --------------------------------------Main---------------*/
@@ -822,6 +830,10 @@ header li button{
     font-size: var(--h3);
 }
 
+.cont-browser figure .capa h2{
+    font-size: var(--body);
+}
+
 /*  */
 
 .slick{
@@ -894,7 +906,7 @@ header li button{
     color: var(--light);
     margin-left: 15px;
     transition: all 300ms ease-out;
-    font-size: var(--h3);
+    font-size: var(--subtitle2);
 }
 
 /*  */
@@ -1152,12 +1164,19 @@ footer{
     width: 106px;
     height: 40px;
     border: none;
-background: var(--danger);
-box-shadow: 0.75px 1px 2px rgba(24, 23, 21, 0.75);
-border-radius: 3px;
-color: var(--light);
-font-size: 22px;
+    background: var(--danger);
+    box-shadow: 0.75px 1px 2px rgba(24, 23, 21, 0.75);
+    border-radius: 3px;
+    color: var(--light);
+    font-size: 22px;
+    cursor: pointer;
+
 }
+
+.logout-button:hover{
+    animation: logout 0.3s linear;
+}
+
 /* ------------------game page------------------ */
 .game-page-info{
     display:flex;
@@ -1406,7 +1425,23 @@ font-size: 22px;
     }
 }
 
-
+@keyframes logout{
+    0%{
+        transform: translatex(0px);
+    }
+    25%{
+        transform: translatex(-5px)  ;
+    }
+    50%{
+        transform: translatex(5px)  ;
+    }
+    75%{
+        transform: translatex(-5px) ;
+    }
+    100%{
+        transform: translatex(0px)  ;
+    }
+}
 
 
 /* carousel */
@@ -1504,7 +1539,7 @@ font-size: 22px;
 }
 .slick-prev{
     left: 16px;
-    background: var(--light);
+    background: rgba(255, 255, 255, 0.65);
 }
 
 .slick-prev:hover {
@@ -1521,7 +1556,7 @@ font-size: 22px;
 
 .slick-next{
     right: 16px;
-    background: var(--light);
+    background: rgba(255, 255, 255, 0.65);
 }
 
 .slick-next:hover {

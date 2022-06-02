@@ -150,87 +150,123 @@ if(document.querySelector("#viewGamesSearch") != null){
         let value = document.querySelector("#buscador").value;
 
         html.innerHTML = ` <div class="view-browser">
-                                <a href="">` + 'Search results for "' + value + `" :</a>
-                                
-                                <div class="visualization">
-                                    <div class="contenedor cont-browser">
-                                    <figure>
-                                    <img src="img/game1.jpg" alt="">
-                                    <div class="capa" id="openGameInfo">
-                                        <h2>`+ value +" y la cueva olvidada" +`</h2> 
-                                        <div class="play-fav">   
-        
-                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
-                                        </div>               
-                                    </div>
-                                </figure>
-                                        
-                                <figure>
-                                <img src="img/game1.jpg" alt="">
-                                <div class="capa" id="openGameInfo">
-                                <h2>`+ value +" del caribe" +`</h2> 
-                                    <div class="play-fav">   
-    
-                                        <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                        <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
-                                    </div>               
-                                </div>
-                            </figure>
-                                        
-                                    </div>
-                                    <div class="contenedor cont-browser">
-                                    <figure>
-                                    <img src="img/game2.jpg" alt="">
-                                    <div class="capa" id="openGameInfo">
-                                    <h2>`+ value +" y furioso" +`</h2> 
-                                        <div class="play-fav">   
-        
-                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
-                                        </div>               
-                                    </div>
-                                </figure>
-                                <figure>
-                                <img src="img/game3.jpg" alt="">
-                                <div class="capa" id="openGameInfo">
-                                <h2>`+ "el laberito de "+ value  +`</h2> 
-                                    <div class="play-fav">   
-    
-                                        <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                        <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
-                                    </div>               
-                                </div>
-                            </figure>
-                                        
-                                    </div>
-                                    <div class="contenedor cont-browser">
-                                    <figure>
-                                    <img src="img/game1.jpg" alt="">
-                                    <div class="capa" id="openGameInfo">
-                                    <h2>`+ "la venganza de "+ value  +`</h2> 
-                                        <div class="play-fav">   
-        
-                                            <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                            <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
-                                        </div>               
-                                    </div>
-                                </figure>
-                                <figure>
-                                <img src="img/game2.jpg" alt="">
-                                <div class="capa" id="openGameInfo">
-                                <h2>`+ "Counter-Strike: "+ value + " Offensive " +`</h2> 
-                                    <div class="play-fav">   
-    
-                                        <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
-                                        <butto href="" class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
-                                    </div>               
-                                </div>
-                            </figure>
-                                        
-                                    </div>
-                                    
-                                </div> ` 
+                
+                <a href="">`+ "Results for: "+ "''"+value +"''"+`</a>
+                
+                <div class="visualization">
+                    
+                    <div class="contenedor cont-browser">
+                        <figure>
+                            <img src="img/game2.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>`+ value + " y la cueva olvidada" +`</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
+                        
+                        <figure>
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>`+ value + " del caribe" +`</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
+                        <figure>
+                            <img src="img/game3.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>`+ value + " y furioso" +`</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
+                        
+                    </div>
+                    <div class="contenedor cont-browser">
+                        <figure>
+                            <img src="img/game2.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>`+"El laberinto de "+ value +`</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
+                        <figure>
+                            <img src="img/game2.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>`+ value + " y el retorno del jedi" +`</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
+                        <figure>
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>`+"La venganza de "+ value +`</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
+                        
+                    </div><div class="contenedor cont-browser">
+                        <figure>
+                            <img src="img/game3.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>`+"Counter Strike: "+ value + " offensive" +`</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
+                        <figure>
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>`+"La carrera de "+ value +`</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
+                        <figure>
+                            <img src="img/game2.jpg" alt="">
+                            <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                <h2>`+"La muerte de "+ value +`</h2> 
+                                <div class="play-fav">   
+
+                                    <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                    <butto href="" class="a-play-contenedor" id="goToGamePage"><img src="./img/play.png" alt="" class="play-contenedor"></butto>
+                                </div>               
+                            </div>
+                        </figure>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div> ` 
     }) 
 }
 
