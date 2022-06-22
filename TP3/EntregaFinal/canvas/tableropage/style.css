@@ -1,0 +1,38 @@
+.canvas-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #613621;
+    width: 1150px;
+}
+
+.canvas-info h1{
+    margin: 0px;
+    padding: 0px;
+}
+
+.canvas-info-buttons{
+    display: flex;
+}
+
+.canvas-info-buttons h2{
+    margin: 0px;
+    padding: 0px;
+    margin: 0px 30px;
+    
+}
+
+.canvas-info-buttons button{
+    background-color: aqua;
+    border: none;
+    border-bottom: 1px solid black;
+    color: black;
+    margin: 5px;
+}
+
+.selected{
+    font-size: 30px;
+    color: gold;
+    text-shadow: rgba(204, 204, 204, 0) 1px 0 10px;
+}

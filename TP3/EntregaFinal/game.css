@@ -1,0 +1,232 @@
+body,html{
+    margin: 0px;
+    padding: 0px;
+}
+
+.canvas-inicio{
+    width: 1150px;
+    height: min-content;
+    padding: 70px 120px;
+    background-color: #3a3833;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas-inicio label{
+    color: #FFF8EC;
+    margin-top: 10px;
+    padding: 0px;
+
+}
+
+.marco-jugador{
+    width: 400px;
+    background-color: #181715;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 30px 0;
+}
+.marco-jugador img{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+
+.play-canvas{
+    border: none;
+    font-weight: bold;
+    font-size: 29px;
+    background-color: #2FE2A2;
+    padding: 12px 24px;
+    margin: 20px;
+    margin-bottom: 30px;
+    width: max-content;
+}
+
+.timer{
+    color: #FFF8EC;
+    margin-top: 10px;
+}
+
+
+
+
+
+.marco-jugador select{
+    background: #3a3833;
+    border:  2px 2px white;
+    text-align: center;
+    font-size: 14px;
+    color: #FFF8EC;
+    font-weight: bolder;
+    height: 30px;
+    padding: 5px;
+    margin-top: 20px;
+    width: 100px;
+}
+
+.marco-jugador option{
+    background: #181715;
+    border:  2px 2px white;
+    text-align: center;
+    font-size: 14px;
+    color: #FFF8EC;
+    font-weight: bolder;
+    height: 30px;
+    padding: 5px;
+    margin-top: 20px;
+    width: 100px;
+}
+
+
+.timer-select{
+    background: #181715;
+    border: 2px 2px #FFF8EC;
+    text-align: center;
+    font-size: 18px;
+    color: #FFF8EC;
+    font-weight: bolder;
+    height: 30px;
+    margin: 20px;
+    width: max-content;
+}
+
+.canvas-info{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #181715;
+    width: 1150px;
+}
+
+.canvas-inicio h1{
+    margin: 0 0 10px 0 ;
+    padding: 0px;
+    color: #FFF8EC;
+}
+
+
+
+
+.canvas-info button{
+    font-size: 20px;
+    margin: 10px 5px 0 5px;
+    background-color: #B91C1C;
+    color: #FFF8EC;
+    border: none;
+    padding: 7px 10px;
+
+    border-radius: 3px;
+}
+
+.canvas-info #menu{
+
+    background-color: #F1F042;
+    color: #181715;
+}
+
+
+.canvas-info-buttons{
+    display: flex;
+}
+
+.turnos{
+    display: flex;
+    width: 200px;
+    margin: 0px;
+    padding: 0px 270px;
+    margin: 0px 30px;
+    visibility: hidden
+}
+
+.canvas-info-buttons button{
+   
+    border: none;
+    border-bottom: 1px solid #181715;
+    color: #181715;
+    margin: 5px;
+}
+
+.selected{
+ 
+    visibility: visible;
+    font-weight: bolder;
+    width: max-content;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: #FFF8EC
+}
+
+.ficha-select{
+    display: flex;
+}
+
+.overlayGanador{
+    display: none;
+    flex-direction:column ;
+    position: absolute;
+    top: 75%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: #181715;
+    color: #FFF8EC;
+    width: max-content;
+    height: 500px;
+    
+    
+}
+
+.overlayGanador .botones{
+
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 30px;
+    margin-bottom: 0px;
+    
+
+}
+
+.overlayGanador .title{
+    
+    display: flex;
+    justify-content: center;
+    padding: 50px 30px;
+    
+}
+
+.overlayGanador .botones-ganador button{
+
+    
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+    width: max-content;
+    font-size: 30px;
+    font-weight: normal; 
+    color: #181715;
+    
+
+}
+
+.overlayGanador .botones #menu{
+
+    background-color: #F1F042;
+    
+}
+
+.overlayGanador .botones #rst{
+
+    background-color: #B91C1C;
+    color: #FFF8EC;
+    
+}
+

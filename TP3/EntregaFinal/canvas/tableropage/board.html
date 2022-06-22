@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <div class="canvas-info">
+            <h2><time>00:00:00</time></h2>
+            <div class="canvas-info-buttons">
+
+                <h2 id="T1">Turno Jugador 1</h2>
+                <div class="canvas-info-select">
+                    <select name="" id="select-canvas">
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button id="rst">reset</button>
+                </div>
+               
+                <h2 id="T2">Turno Jugador 2</h2>
+            </div>
+            
+
+        </div>
+        <canvas height="600" width="1150" id="canvas" style="border: 1px solid black;"></canvas>
+    </div>
+    <script src="board.js"></script>
+    <script src="figure.js"></script>
+    <script src="game.js"></script>
+    
+</body>
+</html>
