@@ -1,0 +1,374 @@
+@keyframes scroll {
+    0% {background-position: 0px;}
+    100% {background-position: -2000px;}
+}
+
+
+
+.layer{
+
+    min-height: 500px;
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-repeat: repeat-x;
+    background-size: auto;
+
+}
+
+.layer-10{
+
+    background-image: url(img/10.png);
+    animation: scroll 1s infinite linear;
+
+}
+
+.layer-9{
+
+    background-image: url(img/9.png);
+    animation: scroll 1200s infinite linear;
+
+}
+
+.layer-8{
+
+    background-image: url(img/8.png);
+    animation: scroll 180s infinite linear;
+
+}
+
+.layer-7{
+
+    background-image: url(img/7.png);
+    animation: scroll 80s infinite linear;
+
+}
+
+.layer-6{
+
+    background-image: url(img/6.png);
+    animation: scroll 66s infinite linear;
+
+}
+
+.layer-5{
+
+    background-image: url(img/5.png);
+    animation: scroll 5s infinite linear;
+    
+
+}
+
+.layer-4{
+
+    background-image: url(img/4.png);
+    animation: scroll 46s infinite linear;
+
+}
+
+.layer-3{
+
+    background-image: url(img/3.png);
+    animation: scroll 36s infinite linear;
+
+}
+
+.layer-2{
+
+    background-image: url(img/2.png);
+    animation: scroll 5s infinite linear;
+
+}
+
+.layer-1{
+
+    background-image: url(img/nieve1.png);
+    animation: scroll 7s infinite linear;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------Squirrel---------48x48-------*/
+.squirrel {
+    position: absolute;
+    top: 520px;
+    left: 300px;
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    background:url(img/squirrel.png) ;
+    animation: walk 0.5s  infinite steps(4) ;
+    
+}
+
+.squirrel2 {
+    position: absolute;
+    top: 545px;
+    left: 270px;
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    background:url(img/squirrel2.png) ;
+    animation: walk 0.5s  infinite steps(4) ;
+    
+}
+
+@keyframes walk {
+    0% {
+        background-position: 0;
+    }
+    100%{
+        background-position: -192px;
+    }
+    
+}
+
+
+@keyframes Jump {
+    0% {
+        top:  520px;
+        background-position: -96px;
+    }
+    45%{
+        top: 410px;
+        transform: rotate(-25deg);
+        background-position: -96px;
+    }
+    50%{
+        top: 400px;
+        transform: rotate(-18deg);
+        background-position: -96px;
+    }
+    55%{
+        transform: rotate(-10deg);
+        top: 410px;
+       
+        background-position: -96px;
+    }
+    100%{
+        top:  520px;
+        background-position: -96px;
+    }
+}
+
+@keyframes Jump2 {
+    0% {
+        top: 545px;
+        background-position: -72px;
+    }
+    45%{
+        top: 410px;
+        transform: rotate(-25deg);
+        background-position: -72px;
+    }
+    50%{
+        top: 400px;
+        transform: rotate(-18deg);
+        background-position: -72px;
+    }
+    55%{
+        transform: rotate(-10deg);
+        top: 410px;
+       
+        background-position: -72px;
+    }
+    100%{
+        top: 545px;
+        background-position: -72px;
+    }
+}
+
+
+/*-------------Obwtaculo---------72x48-------*/
+
+.obstaculo{
+    position: absolute;
+    top: 505px;
+    left: 950px;
+    width: 48px;
+    height: 72px;
+    margin: auto;
+    background:url(img/obs2.png) ;   
+    animation: movement 5s  infinite linear;
+}
+
+@keyframes movement {
+    0% {
+        left: 950px;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+.ave{
+    position: absolute;
+    top: 505px;
+    left: 950px;
+    width: 96px;
+    height: 48px;
+    animation: fly 10s  infinite cubic-bezier(0.5,1.5,0.5,0.8)
+}
+ 
+.aguila{
+    margin: auto;
+    width: 96px;
+    height: 48px;
+    background:url(img/eagle.png); 
+    animation: Mfly 0.6s infinite steps(4);
+}
+
+@keyframes Mfly {
+    0% {
+        background-position: 0px;
+    }
+    100%{
+        background-position: -384px;
+    }
+    
+}
+
+
+@keyframes fly {
+    0% {
+        top: 200px;
+        left: 950px;
+    }
+    25%{
+        top: 300px;
+        left: 550px;
+    }
+    50%{
+        top: 520px;
+        left: 700px;
+    }
+    100%{
+        top: 520px;
+        left: 0px;
+    }
+
+    
+}
+
+/*-------------Acoin----------------*/
+
+
+.Acoin{
+    position: absolute;
+    top: 505px;
+    left: 950px;
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    background:url(img/Acoin.png) ;   
+    animation: Acoin 8s  infinite linear;
+}
+
+@keyframes Acoin {
+    
+    0% {
+        left: 950px;
+        top: 505px;
+    }
+
+    12%{
+        top: 525px;
+    }
+
+    25%{
+        top: 505px;
+
+    }
+
+    37%{
+        top: 525px;
+    }
+
+    50%{
+        top: 505px;
+    }
+
+    62%{
+        top: 525px;
+    }
+
+    75%{
+        top: 505px;
+    }
+
+    87%{
+        top: 525px;
+    }
+
+
+
+
+    100%{
+        left: 0;
+        top: 505px;
+    }
+}
+
+/*-------------PLAY BUTTON----------------*/
+
+
+.button-play-scroll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: greenyellow;
+    width: 100px;
+    height: 50px;
+    z-index: 100;
+    color: black;
+    font-weight: bold;
+}
+
+.inicioGame{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 600px;
+    background-color: dimgray;
+    z-index: 1000;
+}
+
+.inicioGame h1{
+    color: white;
+}
+
+
+
+.info-run{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    visibility: visible;
+    font-size: 20px;
+    font-weight: bolder;
+    color:white
+}

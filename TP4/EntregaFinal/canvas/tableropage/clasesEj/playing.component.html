@@ -1,0 +1,96 @@
+<section class="container">
+  <section class="game">
+    <section class="info">
+      <div class="row">
+        <div class="time-info" [style.width.px]="measures.columnDeck">
+          <p>
+            Tiempo:<b>
+              {{ timer.p1minutes | number: '2.0' }}:{{
+                timer.p1seconds | number: '2.0'
+              }}
+            </b>
+          </p>
+        </div>
+        <div class="center">
+          <h1>{{ gameMode }}</h1>
+          <div class="turn-info">
+            <p>Turno del jugador: {{ game?.turnOfPlayer1 ? '1' : '2' }}</p>
+            <img
+              *ngIf="game?.turnOfPlayer1"
+              src="assets/images/chip-red.webp"
+              [class.img-winner]="winner.winner != undefined"
+              alt="Ficha"
+            />
+            <img
+              *ngIf="!game?.turnOfPlayer1"
+              src="assets/images/chip-yellow.webp"
+              [class.img-winner]="winner.winner != undefined"
+              alt="Ficha"
+            />
+          </div>
+          <div *ngIf="!game.playing">
+            <app-button
+              (click)="showDropdown = !showDropdown"
+              text="Configurar juego"
+            ></app-button>
+            <div class="dropdown-content" [class.show]="showDropdown">
+              <app-select
+                [(value)]="gameMode"
+                (valueChange)="setMeasures()"
+                label="Modo de juego"
+                [options]="[
+                  '4 en linea',
+                  '5 en linea',
+                  '6 en linea',
+                  '7 en linea'
+                ]"
+              ></app-select>
+              <app-select
+                [(value)]="gameTime"
+                (valueChange)="setTime()"
+                label="Tiempo por jugador"
+                [options]="['3 minutos', '5 minutos', '10 minutos']"
+              ></app-select>
+              <app-button
+                classList="w-100"
+                (click)="play()"
+                text="Comenzar juego"
+              ></app-button>
+            </div>
+          </div>
+          <app-button
+            *ngIf="game.playing"
+            (click)="reset()"
+            text="Reiniciar"
+          ></app-button>
+        </div>
+        <div class="time-info" [style.width.px]="measures.columnDeck">
+          <p>
+            Tiempo:<b>
+              {{ timer.p2minutes | number: '2.0' }}:{{
+                timer.p2seconds | number: '2.0'
+              }}
+            </b>
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="winner" [class.show]="winner.winner != undefined">
+      {{ winner.msg }}
+    </div>
+
+    <div class="canvas-container">
+      <div
+        class="opacity-overlay"
+        [class.visible]="winner.winner != undefined"
+      ></div>
+      <canvas
+        (mousedown)="game.canvasMouseDown($event)"
+        (mouseup)="game.canvasMouseUp($event)"
+        (mousemove)="game.canvasMouseMove($event)"
+        #canvas
+        class="canvas"
+      ></canvas>
+    </div>
+  </section>
+</section>

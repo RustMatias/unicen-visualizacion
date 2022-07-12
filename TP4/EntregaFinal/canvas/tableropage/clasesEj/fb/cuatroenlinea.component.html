@@ -1,0 +1,11 @@
+<button id="btnReiniciar" class="btn-primary" (click)="reiniciarjuego()">Reiniciar</button>
+<div class="container">
+    <p>
+        Jugador 1 : <span id="pointsj1">0</span>
+    </p>
+    <p>
+        Jugador 2 : <span id="pointsj2">0</span>
+    </p>
+</div>
+
+<canvas #4enlinea width="800px" height="600px" style="border: 2px solid black;" (mousedown)="juego.mouseDown($event)" (mousemove)="juego.mouseMove($event)" (mouseup)="juego.mouseUp($event)"></canvas>

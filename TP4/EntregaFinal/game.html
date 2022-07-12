@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcornGames- Tp2</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="icon" href="img/acorn.png" type="icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <button href="index.html" class="header-logo-home" onclick="loadingHome()">
+            <img src="./img/acorn.png" 
+                alt="acorn.logue"
+                class="footer-logo">
+            <h1>AcornStudios</h1>
+        </button>
+
+        <button onclick="openBusqueda()" class="header-busqueda">
+            <img src="./img/search.png" alt="acorn.logue" class="footer-logo">
+        </button>
+        
+
+        <ul class="header-categories">
+            <li><button onclick="loadingCat()">Action</button></li>
+            <li><button  onclick="loadingCat()">Roleplay</button></li>
+            <li><button onclick="loadingCat()">Rpg</button></li>
+            <li><button onclick="loadingCat()">Survival</button></li>
+            <li><button  onclick="loadingCat()">Terror</button></li>
+            <li>
+                <button href="">View More ˬ </button>
+                <ul class="vertical-drop-menu">
+                    <li><button  onclick="loadingCat()">Sport</button></li>
+                    <li><button  onclick="loadingCat()">Strategy</button></li>
+                    <li><button  onclick="loadingCat()">Simulation</button></li>
+                    <li><button  onclick="loadingCat()">Adventure</button></li>
+                    <li><button  onclick="loadingCat()">Musical</button></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="header-login-loge" id="showLogin">
+            <button class="header-login">login</button>
+            <img src="./img/user.png" alt="acorn.logue" class="footer-logo">
+        </div>
+    </header>
+
+
+    <!-- Login -->
+    <div class="overlay" id="overlay"></div>
+    
+    <article class="login" id="login">
+        <div class="close-div">
+            <button class="close" id="closeLogin"><img src="img/close.png" alt=""></button>
+        </div>
+        <h1> Login </h1>
+        <form action="">
+            <label for="">Email address</label>
+            <input type="text" class="input-popup" placeholder="Enter your email here">
+
+            <label for="">Password</label>
+            <input type="password" class="input-popup" placeholder="Enter your password here">
+
+            <div>
+                <span><input type="checkbox">Remember</span>
+
+                
+                <a>I forget my password</a>
+                
+            </div>
+           
+            <button  class="login-button" onclick="loadingUser(event)">Enjoy</button>
+           
+            
+        </form>
+        <div class="underline">
+            <button id="goToRegister">Don't have account</button>
+        </div>
+
+    </article>
+
+     <!-- Register -->
+    <article class="register" id="register">
+        <div class="close-div">
+            <button class="close" id="closeRegister"><img src="img/close.png" alt=""></button>
+        </div>
+        <h1> Register </h1>
+        <form action="">
+            <label for="">Email address</label>
+            <input type="text" class="input-popup" placeholder="Enter your email here">
+
+            <label for="">User name</label>
+            <input type="text" class="input-popup" placeholder="Enter your user name here">
+            <label for="">Password</label>
+            <input type="password" class="input-popup" placeholder="Enter your password here">
+
+            <label for="">Repeat your password</label>
+            <input type="password" class="input-popup" placeholder="Confirm your password here">
+           
+            <button class="register-button" onclick="loadingUser(event)">Create Account</button>
+           
+            
+        </form>
+        <div class="underline">
+            <button id="goToLogin">Already have account</button>
+        </div>
+    </article>
+
+
+    <!-- Desplegable busqueda -->
+
+    <article id="busqueda" class="busqueda">
+        <div class="close-div">
+            <button class="close" onclick="openBusqueda()"><img src="img/close.png" alt=""></button>
+        </div>
+        <div class="sorter">
+            <div class="filter">
+                <select name="sortby">
+                    <option value="">A-z</option>
+                    <option value="">1-2</option>
+                    <option value="">Population</option>
+                </select>
+            </div>
+            <div class="filter">
+                <select>
+                    <option value="">category</option>
+                    <option value="">etc</option>
+                    <option value="">etc</option>
+                </select>
+            </div>
+            <div class="browser">
+                <input type="text" class="input-browser" placeholder="Search" name="buscador" id="buscador">
+            </div>
+        </div>
+        <div class="view-games" id="viewGamesSearch">
+
+            <div class="view-browser">
+                
+                <a href="">Sugestions</a>
+                
+                <div class="visualization">
+                    <!-- Hacete el grid mati -->
+                    <div class="contenedor cont-browser">
+                        <figure>
+                            <img src="img/game1.jpg" alt="">
+                            <div class="capa">
+                                <h2>Nombre del juego</h2>                
+                            </div>
+                        </figure>
+                        
+                        <figure>
+                            <img src="img/game2.jpg" alt="">
+                            <div class="capa">
+                                <h2>Nombre del juego</h2>                
+                            </div>
+                        </figure>
+                        
+                    </div>
+                    <div class="contenedor cont-browser">
+                        <figure>
+                            <img src="img/game2.jpg" alt="">
+                            <div class="capa">
+                                <h2>Nombre del juego</h2>                
+                            </div>
+                        </figure>
+                        <figure>
+                            <img src="img/game3.jpg" alt="">
+                            <div class="capa">
+                                <h2>Nombre del juego</h2>                
+                            </div>
+                        </figure>
+                        
+                    </div>
+                    
+                </div>
+                <a href="">Most played</a>
+                <div class="visualization">
+                    <!-- Hacete el grid mati -->
+                </div>
+            </div>
+            <div class="scroll">
+
+            </div>
+        </div>
+        
+        <button  class="all-games" id="goToAllGames">All the games</button>
+        
+
+
+    </article>
+
+
+    <div class="loading-animation" id="loadingOverlay">
+        <img src="img/acorn.png" alt="">
+        <!-- <p class="loading-text">Loading</p>   -->
+        <!--  -->
+        <p class="l">L</p>
+        <p class="o">o</p>
+        <p class="a">a</p>
+        <p class="d">d</p>
+        <p class="i">i</p>
+        <p class="n">n</p>
+        <p class="g">g</p>
+        <!--  -->
+        <p class="dot1">.</p>
+        <p class="dot2">.</p>
+        <p class="dot3">.</p>
+    </div>
+    
+
+<!--INFOGAMES-->
+    <div class="game-info-popup" id="gameInfoPopup" >
+        
+        <div class="close-div-infogames">
+            <button class="close" id="closeInfo"><img src="img/close.png" alt=""></button>
+        </div>
+        <div class="container-up-game-info">
+
+            <div class="grande-up">
+
+                <div>
+
+                    <div class="nombre-del-juego-popup">
+                        <h1>4 en Fila</h1>
+                        <div class="fondo-nombre-del-juego">
+                            <p>
+                                El objetivo de este juego consiste en colocar cuatro fichas en una fila contínua vertical, horizontal o diagonalmente. Se juega sobre un tablero de 8x8 casillas que al empezar está vacío. Ambos jugadores sitúan sus fichas (una por movimiento) en el tablero.                            </p>
+                        </div>
+                    </div>
+
+                
+                    <div class="flex-popup-info-games">
+
+                        <div class="dual-flex-popup-info-games">
+                            <h2>How to play</h2>
+                            <p>4 en fila es un juego de dos jugadores situados en el Refugio y el Atico del Refugio. El objetivo del juego es conseguir cuatro de sus fichas de color en una fila, poniéndolos en una rejilla de la parte superior. Esto puede ser vertical, horizontal o diagonal. Este juego está basado en el juego real " Conecta Cuatro ".
+                            </p>
+                        </div>
+
+                        <div class="dual-flex-popup-info-games">
+                            <h2>Controls</h2>
+                            <div class="keys-info-games"><img src="./img/mouseonmove.png"></div>
+                            <p>
+                                Arrastrar las fichas con el mouse
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="links-info-games">
+                    <h2>Links</h2>
+                    <div>
+                    
+                        <img src="./img/facebooklink.png" alt="">
+                        
+                        <img src="./img/instagramlink.png" alt="">
+                        
+                        <img src="./img/twitterlink.png" alt="">
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <button class="lets-play">
+                <h2>Let's Play</h2>
+                <img src="./img/playgreen.png" alt="" onclick="loadingGamePage()">
+            </button>
+
+        </div>
+        <div class="container-bot-game-info">
+            <div class="carousel">
+                <h2>Gallery</h2>
+                <div class="slick-list carousel-game-info" id="slick-list">
+                    <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                    </button>
+                    <div class="slick-track" id="track">
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                
+                                    <picture>
+                                        <img src="./img/4enfila.jpeg" alt="Image">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                  
+                                    <picture>
+                                        <img src="./img/4enfila4.gif" alt="Image">
+
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                
+                                    <picture>
+                                        <img src="./img/4enfila3.jpg" alt="Image">
+
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                   
+                                    <picture>
+                                        <img src="./img/4enfila3.jpg" alt="Image">
+
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                               
+                                    <picture>
+                                        <img src="./img/4enfila.jpeg" alt="Image">
+
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                   
+                                    <picture>
+                                        <img src="./img/4enfila2.jpg" alt="Image">
+
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                    
+                                    <picture>
+                                        <img src="./img/4enfila3.jpg" alt="Image">
+
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                   
+                                    <picture>
+                                        <img src="./img/4enfila4.gif" alt="Image">
+
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                 
+                                    <picture>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                    <h4><small>Share Your Message</small>Watch</h4>
+                                    <picture>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                    <h4><small>Share Your Message</small>Watch</h4>
+                                    <picture>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                    <h4><small>Share Your Message</small>Watch</h4>
+                                    <picture>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                    <h4><small>Share Your Message</small>Watch</h4>
+                                    <picture>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                    <h4><small>Share Your Message</small>Watch</h4>
+                                    <picture>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="/">
+                                    <h4><small>Share Your Message</small>Watch</h4>
+                                    <picture>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Page -->
+
+    <div class="flex">
+        
+
+        <!-- Main component-->
+        <article class="cards">
+
+            <!--juego-->
+            <section>
+                <div class="game-page-info">
+                    <h1>Counter-Strike Global Offensive</h1>
+                    <button class="how-to-play-page" onclick="openGameInfo()"> how to play</button>
+                </div>
+                
+
+                <div>
+
+                    <div class="canvas-inicio" id="canvasInicio">
+                        
+                        <div class="ficha-select">
+                            
+                            <div class="marco-jugador">
+                                <h1>Jugador 1</h1>
+                                
+                                <img src="img/blueChip.png" alt="">
+                                <img src="img/greenChip.png" alt="">
+                                <img src="img/purpleChip.png" alt="">
+                                <select name="" id="fichaj1" >
+                                    <option value="img/blueChip.png">Blue</option>
+                                    <option value="img/greenChip.png">Green</option>
+                                    <option value="img/purpleChip.png">Purple</option>
+                                </select>
+                            </div>
+            
+                            <div class="marco-jugador">
+                                <h1>Jugador 2</h1>
+                                
+                                <img src="img/redChip.png" alt="">
+                                <img src="img/yellowChip.png" alt="">
+                                <img src="img/pinkChip.png" alt="">
+                                <select name="" id="fichaj2">
+                                    <option class="prueba" value="img/redChip.png">Red</option>
+                                    <option value="img/yellowChip.png">Yellow</option>
+                                    <option value="img/pinkChip.png">Pink</option>
+                                </select>
+                            </div>  
+                        </div>
+                        
+                        <div>
+                            <label for="">Tiempo de juego:</label>
+                            <select class="timer-select" id="timerSelect">
+                                <option value="1">1 minuto</option>
+                                <option value="5">5 minutos</option>
+                                <option value="10">10 minutos</option>
+                                <option value="15">15 minutos</option>
+                            </select>
+                        </div>
+
+                        <button id="botonInicio" class="play-canvas">Jugar</button>
+                    </div>
+            
+            
+            
+                    <div class="canvas-info" id="canvasInfo">
+            
+                        <div>
+                            <button id="menu">Menu</button>
+                            <button id="rst">Reset</button>
+                            
+                        </div>
+                        <h2 id="timer" class="timer"></h2>
+                        
+                        
+                        <div class="canvas-info-buttons" id="canvas-info-buttons">
+                            <h3 class="turnos"id="T1">Turno Jugador 1</h3>
+
+                           
+                            <h3 class="turnos"id="T2">Turno Jugador 2</h3>
+                        </div>
+                        
+                        <canvas height="600" width="1150" id="canvas" style="border: 1px solid black;"></canvas>
+            
+                    </div>
+
+                    <!--
+                    <div class="overlayGanador" id="overlayGanador">
+                        
+                        <div class="title">
+                            <h1 class="exclamacion">! ! ! </h1>
+                            <h1 id="ganadorDiv">
+                                El Ganador es: 
+                            </h1>
+                            <h1 class="exclamacion"> ¡ ¡ ¡</h1>
+                        </div>
+                        
+
+                        <div class="botones-ganador">
+                            <button id="menu2">Menu</button> 
+                            <button id="rst2">Reset</button>
+                            
+                        </div>
+
+
+                    </div>
+                
+                
+                
+                       <div class="canvas-info-buttons">
+                            <h3 class="turnos"id="T1">Turno Jugador 1</h3>
+
+                           
+                            <h3 class="turnos"id="T2">Turno Jugador 2</h3>
+                        </div>
+                
+                -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="buttons-game-down">
+                    <img src="./img/like.png" alt="" onclick="like()" id="like" class="l-dl">
+                    <img src="./img/dislike.png" alt="" onclick="dislike()" id="dislike" class="l-dl">
+
+                    <img src="./img/noFav.png" alt="" id="favoriteclick" onclick="favoriteclick()">
+                    <img src="./img/share.png" alt="">
+                    <img src="./img/expand.png" alt="">
+                </div>
+            </section>
+
+
+
+
+            <!--otros-->
+            <section>
+                <button href="categorie.html" class="name-categorie" id="goToCategorie" >Related games</button>
+                <div class="img-inner-games">
+                    <div class="Carousel">
+                        <div class="slick-list" id="slick-list">
+                            <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                            </button>
+                            <div class="slick-track" id="track">
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Counter Strike: Global Offensive</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="img/game3.jpg" alt="">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>PacMan</h2> 
+                                            <div class="play-fav">   
+            
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                               
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="img/game2.jpg" alt="">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Poker</h2> 
+                                            <div class="play-fav">   
+            
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                               
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game2.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Cities Skylines</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Albion Online</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game3.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Payday 2</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Crash Bandicoot</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game2.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Minecraft</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Grand Thief Auto V</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game2.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Rainbow Six Siege</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                
+                                
+                            </div>
+                            <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section>
+                <button href="categorie.html" class="name-categorie" id="goToCategorie" >Other games</button>
+                <div class="img-inner-games">
+                    <div class="Carousel">
+                        <div class="slick-list" id="slick-list">
+                            <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                            </button>
+                            <div class="slick-track" id="track">
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Counter Strike: Global Offensive</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="img/game3.jpg" alt="">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>PacMan</h2> 
+                                            <div class="play-fav">   
+            
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                               
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="img/game2.jpg" alt="">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Poker</h2> 
+                                            <div class="play-fav">   
+            
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                               
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game2.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Cities Skylines</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Albion Online</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game3.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Payday 2</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Crash Bandicoot</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game2.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Minecraft</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game1.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Grand Thief Auto V</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                <div class="slick">
+                                    <figure>
+                                        <img src="./img/game2.jpg" alt="Image">
+                                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                                            <h2>Rainbow Six Siege</h2> 
+                                            <div class="play-fav">   
+                    
+                                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                                            </div>               
+                                        </div>
+                                    </figure>                                
+                                </div>
+                                
+                                
+                            </div>
+                            <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+
+        </article>
+
+
+        <!-- Barra lateral de info + publicidad-->
+        <aside class="aside-game">
+            <h1>game of the week</h1>
+            <div class="info-aside-game-page">
+                <div class="contenedor">
+                    <figure>
+                        <img src="img/game1.jpg" alt="">
+                        <div class="capa" id="openGameInfo" onclick="openGameInfo()">
+                            <h2>Counter Strike: Global Offensive</h2> 
+                            <div class="play-fav">   
+
+                                <a href=""><img src="./img/noFavGame.png" alt="" class="fav-contenedor"></a>
+                                <button class="a-play-contenedor" onclick="loadingGamePage()"><img src="./img/play.png" alt="" class="play-contenedor"></button>
+                            </div>               
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="info-aside-publi">
+                <img src="img/casino.jpeg" alt="casino">
+                <!-- <iframe src="mash/centralmedio.html" name="centralmedio" width="990" marginwidth="0" height="280" marginheight="0" scrolling="no" frameborder="0" id="centralmedio" ></iframe> -->
+            </div>
+            
+        </aside>
+        
+    </div>
+    
+    
+    
+
+
+    <footer>
+        <!--LINKS-->
+        <article class="footer-inner-component">
+            <section class="footer-links">
+                <h2>About Us</h2>
+                <ul class="footer-item-search">
+                    <li onclick="loadingHome()"> Home </li>
+                    <li> Account </li>
+                    <li> Privacy and Security </li>
+                </ul>
+            </section>
+    
+            <section class="footer-links">
+                <h2>Catalog</h2>
+                <ul class="footer-item-search-colum">
+                    <li onclick="loadingCat()"> Action </li>
+                    <li onclick="loadingCat()"> Survival </li>
+                    <li onclick="loadingCat()"> RPG </li>
+                    <li onclick="loadingCat()"> Terror </li>
+                    <li onclick="loadingCat()"> Adventure </li>
+                    <li onclick="loadingCat()"> Arcade </li>
+                    <li onclick="loadingCat()"> MMO </li>
+                    <li onclick="loadingCat()"> Strategy</li>
+                </ul>
+            </section>
+    
+            <section class="footer-links">
+                <h2>Help</h2>
+                <ul class="footer-item-search">
+                    <li> Support </li>
+                    <li> Business </li>
+                    <li> Contact us </li>
+                </ul>
+            </section>
+        </article>
+    
+    
+        <!--SOCIAL-->
+        <article class="footer-social-component">
+    
+            <div class="social-media">
+                <a href="https://instagram.com"><img src="./img/instagram.png" alt="instagram-icon"></a>
+                <a href="https://facebook.com"><img src="./img/facebook.png" alt="facebook-icon"></a>
+                <a href="https://twitter.com"><img src="./img/twitter.png" alt="twitter-icon"></a>
+            </div>
+    
+            <button href="index.html" class="header-logo-home"  onclick="loadingHome()">
+                <img src="./img/acorn.png" 
+                    alt="acorn.logue"
+                    class="footer-logo">
+                <h1>AcornStudios</h1>
+            </button>
+    
+            <p>2022 AcornStudios | All Rights Reserved</p>
+    
+        </article>
+    
+    </footer>
+
+    <script src="js/interactions.js"></script>
+    <script src="board.js"></script>
+    <script src="ficha.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
+</html>
