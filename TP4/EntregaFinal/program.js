@@ -150,7 +150,7 @@ document.querySelector("#buttonPlayScroll").addEventListener("click", ()=>{
             clearInterval(intervalId);
             fin();
 
-            document.querySelector("#puntajeInfo").innerHTML ="GANASTE, HICISTE 10 PUNTOS";
+            document.querySelector("#puntajeInfo").innerHTML ="¡GANASTE! HICISTE 10 PUNTOS";
             puntosMaximos = 0;
             document.querySelector("#maxPuntos").innerHTML = puntosMaximos;
         }
