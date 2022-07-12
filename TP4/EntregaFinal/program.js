@@ -56,13 +56,13 @@ document.querySelector("#buttonPlayScroll").addEventListener("click", ()=>{
     document.querySelector("#layer9").classList.toggle("layer-9");
     document.querySelector("#layer10").classList.toggle("layer-10");
     document.querySelector("#aguila").classList.toggle("aguila");
-    document.querySelector("#layer3").style.backgroundImage = "url(../img/3.png)"
-    document.querySelector("#layer4").style.backgroundImage = "url(../img/4.png)"
-    document.querySelector("#layer5").style.backgroundImage = "url(../img/5.png)"
-    document.querySelector("#layer6").style.backgroundImage = "url(../img/6.png)"
-    document.querySelector("#layer7").style.backgroundImage = "url(../img/7.png)"
-    document.querySelector("#layer8").style.backgroundImage = "url(../img/8.png)"
-    document.querySelector("#layer10").style.backgroundImage = "url(../img/10.png)"
+    document.querySelector("#layer3").style.backgroundImage = "url(./img/3.png)"
+    document.querySelector("#layer4").style.backgroundImage = "url(./img/4.png)"
+    document.querySelector("#layer5").style.backgroundImage = "url(./img/5.png)"
+    document.querySelector("#layer6").style.backgroundImage = "url(./img/6.png)"
+    document.querySelector("#layer7").style.backgroundImage = "url(./img/7.png)"
+    document.querySelector("#layer8").style.backgroundImage = "url(./img/8.png)"
+    document.querySelector("#layer10").style.backgroundImage = "url(./img/10.png)"
 
     
     if(interval != null){
@@ -127,13 +127,13 @@ document.querySelector("#buttonPlayScroll").addEventListener("click", ()=>{
             if(!hard){
                 hard = true;
 
-                document.querySelector("#layer3").style.backgroundImage = "url(../img/32.png)"
-                document.querySelector("#layer4").style.backgroundImage = "url(../img/42.png)"
-                document.querySelector("#layer5").style.backgroundImage = "url(../img/52.png)"
-                document.querySelector("#layer6").style.backgroundImage = "url(../img/62.png)"
-                document.querySelector("#layer7").style.backgroundImage = "url(../img/72.png)"
-                document.querySelector("#layer8").style.backgroundImage = "url(../img/82.png)"
-                document.querySelector("#layer10").style.backgroundImage = "url(../img/102.png)"
+                document.querySelector("#layer3").style.backgroundImage = "url(./img/32.png)"
+                document.querySelector("#layer4").style.backgroundImage = "url(./img/42.png)"
+                document.querySelector("#layer5").style.backgroundImage = "url(./img/52.png)"
+                document.querySelector("#layer6").style.backgroundImage = "url(./img/62.png)"
+                document.querySelector("#layer7").style.backgroundImage = "url(./img/72.png)"
+                document.querySelector("#layer8").style.backgroundImage = "url(./img/82.png)"
+                document.querySelector("#layer10").style.backgroundImage = "url(./img/102.png)"
                  
             }
         }
