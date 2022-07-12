@@ -54,9 +54,11 @@ class Character{
     getingCoin(){
       document.querySelector("#squirrel").style.background = "url(img/squirrelCoin.png)";
       document.querySelector("#squirrel").style.height = "53px";
+      document.querySelector("#squirrel").style.top = "467px";
       setTimeout(()=>{
         document.querySelector("#squirrel").style.background = "url(img/squirrel.png)";
         document.querySelector("#squirrel").style.height = "48px";
+        document.querySelector("#squirrel").style.top = "470px";
       }, 1000);
     }
     

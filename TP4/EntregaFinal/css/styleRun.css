@@ -8,11 +8,11 @@
 .layer{
 
     min-height: 500px;
-    width: 1000px;
-    height: 600px;
+    width: 1150px;
+    height: 400px;
     position: absolute;
     top: 100px;
-    left: 0;
+    left: 2rem;
     background-repeat: repeat-x;
     background-size: auto;
 
@@ -20,71 +20,71 @@
 
 .layer-10{
 
-    background-image: url(img/10.png);
+    background-image: url(../img/10.png);
     animation: scroll 1s infinite linear;
 
 }
 
 .layer-9{
 
-    background-image: url(img/9.png);
+    background-image: url(../img/9.png);
     animation: scroll 1200s infinite linear;
 
 }
 
 .layer-8{
 
-    background-image: url(img/8.png);
+    background-image: url(../img/8.png);
     animation: scroll 180s infinite linear;
 
 }
 
 .layer-7{
 
-    background-image: url(img/7.png);
+    background-image: url(../img/7.png);
     animation: scroll 80s infinite linear;
 
 }
 
 .layer-6{
 
-    background-image: url(img/6.png);
+    background-image: url(../img/6.png);
     animation: scroll 66s infinite linear;
 
 }
 
 .layer-5{
 
-    background-image: url(img/5.png);
-    animation: scroll 5s infinite linear;
+    background-image: url(../img/5.png);
+    animation: scroll 10s infinite linear;
     
 
 }
 
 .layer-4{
 
-    background-image: url(img/4.png);
+    background-image: url(../img/4.png);
     animation: scroll 46s infinite linear;
 
 }
 
 .layer-3{
 
-    background-image: url(img/3.png);
+    background-image: url(../img/3.png);
     animation: scroll 36s infinite linear;
 
 }
 
 .layer-2{
 
-    background-image: url(img/2.png);
+    background-image: url(../img/2.png);
     animation: scroll 5s infinite linear;
 
 }
 
 .layer-1{
 
-    background-image: url(img/nieve1.png);
+    background-image: url(../img/nieve1.png);
     animation: scroll 7s infinite linear;
 
 }
@@ -103,26 +103,34 @@
 /*-------------Squirrel---------48x48-------*/
 .squirrel {
     position: absolute;
-    top: 520px;
+    top: 470px;
     left: 300px;
     width: 48px;
     height: 48px;
     margin: auto;
-    background:url(img/squirrel.png) ;
+    background:url(../img/squirrel.png) ;
     animation: walk 0.5s  infinite steps(4) ;
     
 }
 
+.pepe{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
 .squirrel2 {
     position: absolute;
-    top: 545px;
+    top: 495px;
     left: 270px;
     width: 24px;
     height: 24px;
     margin: auto;
-    background:url(img/squirrel2.png) ;
-    animation: walk 0.5s  infinite steps(4) ;
-    
+    background:url(../img/squirrel2.png) ;
+    animation: walk 0.35s  infinite steps(4) ;  
 }
 
 @keyframes walk {
@@ -138,55 +146,55 @@
 
 @keyframes Jump {
     0% {
-        top:  520px;
+        top: 470px;
         background-position: -96px;
     }
     45%{
-        top: 410px;
+        top: 360px;
         transform: rotate(-25deg);
         background-position: -96px;
     }
     50%{
-        top: 400px;
+        top: 350px;
         transform: rotate(-18deg);
         background-position: -96px;
     }
     55%{
         transform: rotate(-10deg);
-        top: 410px;
+        top: 360px;
        
         background-position: -96px;
     }
     100%{
-        top:  520px;
+        top: 470px;
         background-position: -96px;
     }
 }
 
 @keyframes Jump2 {
     0% {
-        top: 545px;
-        background-position: -72px;
+        top: 495px;
+        background-position: -96px;
     }
     45%{
-        top: 410px;
+        top: 360px;
         transform: rotate(-25deg);
-        background-position: -72px;
+        background-position: -96px;
     }
     50%{
-        top: 400px;
+        top: 350px;
         transform: rotate(-18deg);
-        background-position: -72px;
+        background-position: -96px;
     }
     55%{
         transform: rotate(-10deg);
-        top: 410px;
+        top: 360px;
        
-        background-position: -72px;
+        background-position: -96px;
     }
     100%{
-        top: 545px;
-        background-position: -72px;
+        top: 495px;
+        background-position: -96px;
     }
 }
 
@@ -195,21 +203,23 @@
 
 .obstaculo{
     position: absolute;
-    top: 505px;
-    left: 950px;
+    top: 455px;
+    left: 1060px;
     width: 48px;
     height: 72px;
     margin: auto;
-    background:url(img/obs2.png) ;   
+    background:url(../img/obs2.png) ;   
     animation: movement 5s  infinite linear;
 }
 
+
+
 @keyframes movement {
     0% {
-        left: 950px;
+        left: 1130px;
     }
     100%{
-        left: 0;
+        left: 2rem;
     }
 }
 
@@ -226,7 +236,7 @@
     margin: auto;
     width: 96px;
     height: 48px;
-    background:url(img/eagle.png); 
+    background:url(../img/eagle.png); 
     animation: Mfly 0.6s infinite steps(4);
 }
 
@@ -251,73 +261,141 @@
         left: 550px;
     }
     50%{
-        top: 520px;
+        top: 460px;
         left: 700px;
     }
     100%{
-        top: 520px;
-        left: 0px;
+        top: 460px;
+        left: 2rem;
     }
 
     
 }
+
+
+
+
+
+.obstaculo3{
+    z-index: 1000;
+    position: absolute;
+    top: 465px;
+    left: 1060px;
+    width: 96px;
+    height: 48px;
+    margin: auto; 
+    animation: spider 3s  infinite linear;
+}
+
+.obstaculooff{
+    position: absolute;
+    top: 465px;
+    left: 1060px;
+    width: 96px;
+    height: 48px;
+}
+
+
+@keyframes spider {
+    0% {
+        left: 1130px;
+        top: 465px;
+    }
+    70%{
+        left: 500px;
+        top: 465px;
+    }
+    85%{
+        left: 500px;
+        top: 465px;
+    }
+    90%{
+        top: 390px;
+    }95%{
+        top: 390px;
+    }
+    100%{
+        left: 2rem;
+        top: 465px;
+    }
+}
+
+/*48x384*/
+
+.arania{
+    margin: auto;
+    width: 96px;
+    height: 48px;
+    background:url(../img/spider.png); 
+    animation: Awalk 0.6s infinite steps(3);
+}
+
+@keyframes Awalk {
+    0% {
+        background-position: 0px;
+    }
+    100%{
+        background-position: -288px;
+    }
+}
+
 
 /*-------------Acoin----------------*/
 
 
 .Acoin{
     position: absolute;
-    top: 505px;
-    left: 950px;
+    top: 455px;
+    left: 1130px;
     width: 48px;
     height: 48px;
     margin: auto;
-    background:url(img/Acoin.png) ;   
+    background:url(../img/Acoin.png) ;   
     animation: Acoin 8s  infinite linear;
 }
 
 @keyframes Acoin {
     
     0% {
-        left: 950px;
-        top: 505px;
+        left: 1130px;
+        top: 455px;
     }
 
     12%{
-        top: 525px;
+        top: 475px;
     }
 
     25%{
-        top: 505px;
+        top: 455px;
 
     }
 
     37%{
-        top: 525px;
+        top: 475px;
     }
 
     50%{
-        top: 505px;
+        top: 455px;
     }
 
     62%{
-        top: 525px;
+        top: 475px;
     }
 
     75%{
-        top: 505px;
+        top: 455px;
     }
 
     87%{
-        top: 525px;
+        top: 475px;
     }
 
 
 
 
     100%{
-        left: 0;
-        top: 505px;
+        left: 2rem;
+        top: 455px;
     }
 }
 
@@ -328,15 +406,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 12px;
     border: none;
-    background-color: greenyellow;
+    background-color: #2FE2A2;
     width: 100px;
     height: 50px;
     z-index: 100;
-    color: black;
+    color: #181715;
     font-weight: bold;
+    font-size: 22px;
+    margin: 40px 0 50px 0;
 }
+
+
 
 .inicioGame{
     position: absolute;
@@ -344,14 +426,39 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1000px;
-    height: 600px;
-    background-color: dimgray;
+    width: 1150px;
+    height: 400px;
+    background-image: url(../img/10.png);
     z-index: 1000;
 }
 
 .inicioGame h1{
-    color: white;
+    
+    color: #FFF8EC;
+    
+    margin: 0 20px 0 20px;
+}
+
+.titulo-run{
+    display: flex;
+}
+
+.puntajeInfo{
+
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFF8EC;
+    border-radius: 12px;
+    border: none;
+    background-color: #4F2C1B;
+    min-width: 440px;
+    padding: 5px 15px;
+    margin: 20px 0;
+
+}
+
+.inicioGame p{
+    color :#413f3cd3;
 }
 
 

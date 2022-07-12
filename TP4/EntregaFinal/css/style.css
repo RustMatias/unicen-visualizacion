@@ -130,7 +130,7 @@ header{
     color: var(--primary);
     position: fixed;
     top: 0px;
-    z-index: 5;
+    z-index: 5000;
 }
 
 header button{
@@ -1200,8 +1200,11 @@ footer{
 }
 
 .game-page-info button{
+    position: absolute;
     width: 118px;
     height: 30px;
+    left: 1064px;
+    z-index: 1999;
     border: none;
     background-color: var(--accent);
     color: var(--light);
@@ -1225,6 +1228,8 @@ footer{
     background-color: var(--secondaryD1);
     padding-right: 40px;
     align-items: center;
+    margin-top: 353px;
+    
 }
 
 .buttons-game-down img{
@@ -1277,7 +1282,7 @@ footer{
 }
 
 .game-info-popup{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -200%);
@@ -1337,7 +1342,8 @@ footer{
 .fondo-nombre-del-juego{
     background-color: var(--overlaySecondary);
     border-radius: 6px;
-    margin: 0;    
+    margin: 0;
+    height: 99px;
 }
 
 .flex-popup-info-games{
@@ -1597,7 +1603,7 @@ footer{
 
 .loading-animation{
     position: fixed;
-    z-index:10;
+    z-index:10000;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
