@@ -63,7 +63,7 @@ document.querySelector("#buttonPlayScroll").addEventListener("click", ()=>{
     document.querySelector("#layer7").style.backgroundImage = "url(./img/7.png)"
     document.querySelector("#layer8").style.backgroundImage = "url(./img/8.png)"
     document.querySelector("#layer10").style.backgroundImage = "url(./img/10.png)"
-
+    hard = false;
     
     if(interval != null){
         clearInterval(interval);
