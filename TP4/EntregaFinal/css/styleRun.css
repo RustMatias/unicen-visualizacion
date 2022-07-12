@@ -20,42 +20,42 @@
 
 .layer-10{
 
-    background-image: url(../img/10.png);
+    background-image: url(./img/10.png);
     animation: scroll 1s infinite linear;
 
 }
 
 .layer-9{
 
-    background-image: url(../img/9.png);
+    background-image: url(./img/9.png);
     animation: scroll 1200s infinite linear;
 
 }
 
 .layer-8{
 
-    background-image: url(../img/8.png);
+    background-image: url(./img/8.png);
     animation: scroll 180s infinite linear;
 
 }
 
 .layer-7{
 
-    background-image: url(../img/7.png);
+    background-image: url(./img/7.png);
     animation: scroll 80s infinite linear;
 
 }
 
 .layer-6{
 
-    background-image: url(../img/6.png);
+    background-image: url(./img/6.png);
     animation: scroll 66s infinite linear;
 
 }
 
 .layer-5{
 
-    background-image: url(../img/5.png);
+    background-image: url(./img/5.png);
     animation: scroll 10s infinite linear;
     
 
@@ -63,28 +63,28 @@
 
 .layer-4{
 
-    background-image: url(../img/4.png);
+    background-image: url(./img/4.png);
     animation: scroll 46s infinite linear;
 
 }
 
 .layer-3{
 
-    background-image: url(../img/3.png);
+    background-image: url(./img/3.png);
     animation: scroll 36s infinite linear;
 
 }
 
 .layer-2{
 
-    background-image: url(../img/2.png);
+    background-image: url(./img/2.png);
     animation: scroll 5s infinite linear;
 
 }
 
 .layer-1{
 
-    background-image: url(../img/nieve1.png);
+    background-image: url(./img/nieve1.png);
     animation: scroll 7s infinite linear;
 
 }
@@ -108,7 +108,7 @@
     width: 48px;
     height: 48px;
     margin: auto;
-    background:url(../img/squirrel.png) ;
+    background:url(./img/squirrel.png) ;
     animation: walk 0.5s  infinite steps(4) ;
     
 }
@@ -129,7 +129,7 @@
     width: 24px;
     height: 24px;
     margin: auto;
-    background:url(../img/squirrel2.png) ;
+    background:url(./img/squirrel2.png) ;
     animation: walk 0.35s  infinite steps(4) ;  
 }
 
@@ -208,7 +208,7 @@
     width: 48px;
     height: 72px;
     margin: auto;
-    background:url(../img/obs2.png) ;   
+    background:url(./img/obs2.png) ;   
     animation: movement 5s  infinite linear;
 }
 
@@ -236,7 +236,7 @@
     margin: auto;
     width: 96px;
     height: 48px;
-    background:url(../img/eagle.png); 
+    background:url(./img/eagle.png); 
     animation: Mfly 0.6s infinite steps(4);
 }
 
@@ -326,7 +326,7 @@
     margin: auto;
     width: 96px;
     height: 48px;
-    background:url(../img/spider.png); 
+    background:url(./img/spider.png); 
     animation: Awalk 0.6s infinite steps(3);
 }
 
@@ -350,7 +350,7 @@
     width: 48px;
     height: 48px;
     margin: auto;
-    background:url(../img/Acoin.png) ;   
+    background:url(./img/Acoin.png) ;   
     animation: Acoin 8s  infinite linear;
 }
 
@@ -428,7 +428,7 @@
     align-items: center;
     width: 1150px;
     height: 400px;
-    background-image: url(../img/10.png);
+    background-image: url(./img/10.png);
     z-index: 1000;
 }
 

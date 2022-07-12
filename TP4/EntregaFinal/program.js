@@ -101,7 +101,7 @@ document.querySelector("#buttonPlayScroll").addEventListener("click", ()=>{
             },1000)
             character.getingCoin();
             puntosActuales++;
-            document.querySelector("#puntajeInfo").innerHTML ="Tu puntaje fue: " + puntosActuales+ " | " + "Tu puntaje maximo: " + puntosMaximos;
+            document.querySelector("#puntajeInfo").innerHTML ="Tu puntaje fue: " + puntosActuales+ " | " + "Tu puntaje maximo:   " + puntosMaximos;
         }
 
         if(puntosActuales >=5 && !spiderIsOn){
